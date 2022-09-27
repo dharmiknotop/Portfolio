@@ -1,0 +1,11 @@
+.s {
+  &__containerOuter {
+    width: 100%;
+  }
+  &__container {
+    width: 1100px;
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+}

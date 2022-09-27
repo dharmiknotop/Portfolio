@@ -1,0 +1,83 @@
+@import '/styles/variables.scss';
+
+.heading {
+  font-family: $secondaryFont;
+}
+
+.expContainer {
+  width: 550px;
+  max-width: 100%;
+
+  &__companyName {
+    font-family: $secondaryFont;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+
+  &__timePeriod {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: $primaryFont;
+    color: $grayColor;
+    font-size: 0.9rem;
+  }
+
+  &__bulletPointContainer {
+    display: flex;
+    font-family: Fredoka;
+    color: $grayColor;
+    margin-bottom: 12px;
+  }
+
+  &__bulletPoint {
+    margin-left: 10px;
+    margin-top: 2px;
+    line-height: 25px;
+
+    span {
+      color: $cyanColor;
+    }
+  }
+
+  &__bulletPointSvgContainer {
+    width: 20px;
+    margin-top: 5px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.expCompaniesContainerOuter {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+
+  margin: 15vh 10vw 15vh;
+}
+
+.expCompaniesContainer {
+  list-style: none;
+
+  &__activeTxt {
+    border-left: 2px solid cyan !important;
+    transition: 2s all ease-in-out;
+    background-color: #112240;
+    color: cyan;
+  }
+
+  li {
+    padding: 1rem;
+    border-left: 2px solid gray;
+    margin-right: 2rem;
+
+    &:hover {
+      background-color: #112240;
+      cursor: pointer;
+      color: cyan;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}

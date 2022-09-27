@@ -1,0 +1,46 @@
+@import '/styles/variables.scss';
+
+.heading {
+  font-family: $secondaryFont;
+}
+.s {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 2rem 0 8rem;
+
+  &__aboutMeContainer {
+    color: $grayColor;
+    span {
+      color: $cyanColor;
+    }
+  }
+
+  &__knowMeSectionTitle,
+  &__skillsSectionTitle {
+    color: $whiteColor;
+    font-family: $primaryFont;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__skillsSectionTitle {
+    margin-left: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__skillsOuterContainer {
+    padding-left: 15px;
+  }
+
+  &__skillsContainer {
+    color: $whiteColor;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+  }
+}

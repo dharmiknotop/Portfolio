@@ -1,7 +1,7 @@
 .Myimg {
   width: 100%;
   height: 70vh;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png');
+  background-image: url('/profilePic.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,16 +78,7 @@
 .t-block:nth-child(9):hover ~ .Myimg {
   transform: rotateX(20deg) rotateY(-20deg) !important;
 }
-.Typing-effect {
-  position: relative;
-}
-.Typing-effect > span {
-  font-size: 2rem;
-  position: relative;
-  left: 0;
-  font-family: 'Hubballi', cursive;
-  font-weight: 800;
-}
+
 .Typewriter {
   font-size: 2rem;
   font-weight: 800;
@@ -157,21 +148,9 @@
   color: cyan;
   letter-spacing: 1px;
 }
-.slider {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0a192f;
-  z-index: 100;
-  text-align: center;
-}
+
 .slider .secondtext {
   font-size: clamp(2rem, 8vw, 3rem);
-}
-.slider div {
-  font-size: clamp(1.5rem, 6vw, 3rem);
 }
 
 .textalignment {
@@ -285,9 +264,7 @@
   display: flex;
   align-items: center;
 }
-.Project {
-  margin-bottom: 5rem;
-}
+
 header {
   display: flex;
   position: fixed;
@@ -304,10 +281,7 @@ header {
 header ul {
   list-style: none;
 }
-.navbar-brand {
-  margin-left: 1rem;
-  font-size: 1.5rem;
-}
+
 header li a:hover {
   color: cyan;
   transition: 0.2s all ease-in;
@@ -346,11 +320,7 @@ header li a {
   .imgcont {
     margin-top: 5vw;
   }
-  .navbar-brand {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-  }
+
   .right-navbar {
     display: none;
   }

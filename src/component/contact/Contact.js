@@ -1,27 +1,21 @@
 import React from 'react'
 import { BsTelephone } from 'react-icons/bs'
 import { CgMail } from 'react-icons/cg'
+import styles from './css/contact.module.scss'
 const Contact = () => {
   return (
-    <div
-      style={{ height: '50vh' }}
-      className="d-flex f-d align-items-center justify-content-center"
-    >
-      <h1>
-        <p style={{ fontSize: '4rem', margin: '0', textAlign: 'center' }}>
-          Contact me on :{' '}
-        </p>
-      </h1>{' '}
-      <div>
+    <div className={styles.s}>
+      <h1 className={styles.s__title}>Contact me on : </h1>{' '}
+      <div className={styles.s__container}>
         {' '}
-        <p className="t-1 d-flex align-items-center">
+        <div className={`${styles.s__item}`}>
           <BsTelephone color="lightGreen " style={{ paddingRight: '1rem' }} />{' '}
           8487923230
-        </p>
-        <p className="t-1 d-flex align-items-center">
+        </div>
+        <div className={`${styles.s__item}`}>
           <CgMail color="white " style={{ paddingRight: '1rem' }} />{' '}
           dhardharmik7@gmail.com
-        </p>
+        </div>
       </div>
     </div>
   )

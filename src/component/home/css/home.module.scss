@@ -1,0 +1,129 @@
+@import '/styles/variables.scss';
+
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a192f;
+  z-index: 100;
+  text-align: center;
+  color: $cyanColor;
+
+  &__centerTxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-family: $secondaryFont;
+    margin: 0;
+  }
+
+  .title {
+    font-family: $secondaryFont;
+    color: $grayColor;
+  }
+  .name {
+    color: $whiteColor;
+  }
+}
+
+.s {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+
+  &__nameTxt {
+    color: $whiteColor;
+    font-family: 'Yuji Boku', serif;
+    font-size: clamp(2rem, 8vw, 5rem);
+
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-left: 2rem;
+  }
+
+  &__subTitle {
+    color: $cyanColor;
+  }
+
+  &__typingEffectContainer {
+    position: relative;
+
+    span {
+      font-size: 2rem;
+      position: relative;
+      left: 0;
+      font-family: 'Hubballi', cursive;
+      font-weight: 800;
+    }
+  }
+
+  &__imageOuterContainer {
+    position: relative;
+    margin: 0 5rem;
+  }
+
+  &__imageContainer {
+    height: 70vh;
+  }
+
+  &__myImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('/profilePic.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+  }
+
+  &__imageContainer::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 4rem;
+    height: 4rem;
+    border-left: 4px solid cyan;
+    border-top: 4px solid cyan;
+  }
+  &__imageContainer::after {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    width: 4rem;
+    height: 4rem;
+    border-right: 4px solid cyan;
+    border-bottom: 4px solid cyan;
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+    align-items: center;
+  }
+}
+.Typewriter {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Hubballi', cursive;
+  position: absolute;
+  top: 0;
+  margin-left: 70px;
+  left: 0;
+  color: cyan;
+}

@@ -1,7 +1,7 @@
 import { gsap } from 'gsap/dist/gsap'
-import { useState, useEffect, useContext, useRef } from 'react'
+import { useState, useEffect, useContext, useRef, Fragment } from 'react'
 import Typewriter from 'typewriter-effect'
-import '../../../vanilla-tilt'
+import styles from './css/home.module.scss'
 
 const Home = () => {
   const tl = useRef()
@@ -9,7 +9,7 @@ const Home = () => {
     tl.current = gsap
       .timeline()
       .fromTo(
-        '.firsttext',
+        '.firstLine',
         {
           autoAlpha: 0,
           y: '-100%',
@@ -22,7 +22,7 @@ const Home = () => {
         },
       )
       .fromTo(
-        '.secondtext',
+        '.secondLine',
         {
           autoAlpha: 0,
           y: '-100%',
@@ -36,7 +36,7 @@ const Home = () => {
         '-=0.6',
       )
       .fromTo(
-        '.thirdtext',
+        '.thirdLine',
         {
           autoAlpha: 0,
           y: '-100%',
@@ -50,7 +50,7 @@ const Home = () => {
         '-=0.7',
       )
       .fromTo(
-        '.textalignment',
+        '.slideDown',
         {
           y: '0%',
         },
@@ -62,7 +62,7 @@ const Home = () => {
         '+=.5',
       )
       .to(
-        '.slider ',
+        '.slideUp',
         {
           y: '-100%',
           duration: 1,
@@ -70,7 +70,7 @@ const Home = () => {
         '-=0.8',
       )
       .fromTo(
-        '.Myimg',
+        '.myImg',
         {
           autoAlpha: 0,
           y: '100',
@@ -86,7 +86,7 @@ const Home = () => {
         '<+=.2',
       )
       .fromTo(
-        '.Nameis ',
+        '.nameIs',
         {
           autoAlpha: 0,
           y: '100',
@@ -100,7 +100,7 @@ const Home = () => {
         '<',
       )
       .fromTo(
-        '.Title ',
+        '.nameTxt ',
         {
           autoAlpha: 0,
           y: '100',
@@ -115,7 +115,7 @@ const Home = () => {
         '<',
       )
       .fromTo(
-        '.My-Info',
+        '.typeWriter',
         {
           autoAlpha: 0,
           duration: 1,
@@ -129,61 +129,56 @@ const Home = () => {
       )
   }, [])
   return (
-    <>
-      <div className="slider cyan ">
-        <div className="textalignment Logofont ">
-          <div className="firsttext ">
+    <Fragment>
+      <div className={`${styles.slider} slideDown`}>
+        <div className={`${styles.slider__centerTxt} slideUp`}>
+          <div className="firstLine">
             Welcome to <br />
           </div>
-          <div className="gray secondtext">
-            &lt;<span className="white Logofont">Dharmik</span> /&gt;
+          <div className={`${styles.title} secondLine`}>
+            &lt;<span className={`${styles.name}`}> Dharmik </span> /&gt;
           </div>
-          <div className="thirdtext"> Portfolio website.</div>
+          <div className="thirdLine"> Portfolio website.</div>
         </div>
       </div>
-      <div className="">
-        <div className="DivideDiv Home2 TitleDescription  ">
-          <div className="container TitleDiv t-2">
-            <div className="text-left">
-              <span className="cyan Nameis">Hi, my Name is</span>
-            </div>
-            <h2 className="white mainfont Title  ">Dharmik Upadhyay</h2>
-            <div className="Typing-effect My-Info">
-              <span>I'm a</span>
+      <div className={`${styles.s}`}>
+        <div className={`${styles.s__container}`}>
+          <div>
+            <span className={`${styles.s__subTitle} nameIs`}>
+              Hi, my Name is
+            </span>
+          </div>
+          <h2 className={`${styles.s__nameTxt}`}>Dharmik Upadhyay</h2>
+          <div className={`${styles.s__typingEffectContainer} typeWriter`}>
+            <span>I{`'`}m a</span>
 
-              <Typewriter
-                className="Typewriter"
-                options={{
-                  autoStart: true,
-                  loop: true,
-                  strings: [
-                    'Software Engineer',
-                    'Web developer',
-                    'Android developer',
-                  ],
-                  delay: 40,
-                }}
-              />
-            </div>
-            {/* <span className="gray My-Info">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+                strings: [
+                  'Software Engineer',
+                  'Web developer',
+                  'Android developer',
+                ],
+                delay: 40,
+              }}
+            />
+          </div>
+          {/* <span className="gray My-Info">
               I am Enthusiast in DevOps, Open Source Projects and Software
               Development. Currently Studying in 3rd sem of Information
               Technology In government polytechnic.
             </span> */}
-          </div>
+        </div>
 
-          <div className="imgcont TitleDiv container">
-            <div className="" style={{ position: 'relative' }}>
-              <div
-                data-tilt
-                data-tilt-full-page-listening
-                className="Myimg"
-              ></div>
-            </div>
+        <div className={`${styles.s__imageOuterContainer}`}>
+          <div className={`${styles.s__imageContainer}`}>
+            <div className={`${styles.s__myImg} myImg`}></div>
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   )
 }
 

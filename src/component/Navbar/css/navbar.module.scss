@@ -1,0 +1,13 @@
+@import '/styles/variables.scss';
+
+.navbar_brand {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.title {
+  font-family: $secondaryFont;
+  color: $grayColor;
+}
+.name {
+  color: $whiteColor;
+}
