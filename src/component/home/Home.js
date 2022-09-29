@@ -1,133 +1,140 @@
-import { gsap } from 'gsap/dist/gsap'
-import { useState, useEffect, useContext, useRef, Fragment } from 'react'
-import Typewriter from 'typewriter-effect'
-import styles from './css/home.module.scss'
+import { gsap } from "gsap/dist/gsap";
+import { useState, useEffect, useContext, useRef, Fragment } from "react";
+import Typewriter from "typewriter-effect";
+import styles from "./css/home.module.scss";
 
 const Home = () => {
-  const tl = useRef()
+  const tl = useRef();
   useEffect(() => {
     tl.current = gsap
       .timeline()
       .fromTo(
-        '.firstLine',
+        ".firstLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
-        },
+        }
       )
       .fromTo(
-        '.secondLine',
+        ".secondLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
         },
-        '-=0.6',
+        "-=0.6"
       )
       .fromTo(
-        '.thirdLine',
+        ".thirdLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
         },
-        '-=0.7',
+        "-=0.7"
       )
       .fromTo(
-        '.slideDown',
+        ".slideDown",
         {
-          y: '0%',
+          y: "0%",
         },
         {
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
-          y: '-100%',
+          ease: "SlowMo.ease.config(0.7, 0.7, false)",
+          y: "-100%",
           duration: 1,
         },
-        '+=.5',
+        "+=.5"
       )
       .to(
-        '.slideUp',
+        ".slideUp",
         {
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
-        '-=0.8',
+        "-=0.8"
       )
       .fromTo(
-        '.myImg',
-        {
-          autoAlpha: 0,
-          y: '100',
-          duration: 1,
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
-        },
-        {
-          autoAlpha: 1,
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
-          y: '0',
-          duration: 1,
-        },
-        '<+=.2',
-      )
-      .fromTo(
-        '.nameIs',
-        {
-          autoAlpha: 0,
-          y: '100',
-          duration: 1,
-        },
-        {
-          autoAlpha: 1,
-          y: '0',
-          duration: 2,
-        },
-        '<',
-      )
-      .fromTo(
-        '.nameTxt ',
-        {
-          autoAlpha: 0,
-          y: '100',
-          duration: 1,
-        },
-        {
-          autoAlpha: 1,
-
-          y: '0',
-          duration: 1,
-        },
-        '<',
-      )
-      .fromTo(
-        '.typeWriter',
+        ".borders",
         {
           autoAlpha: 0,
           duration: 1,
         },
         {
           autoAlpha: 1,
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
+          ease: "SlowMo.ease.config(0.7, 0.7, false)",
           duration: 1,
         },
-        '-=0.5',
+        "-=0.5"
       )
-  }, [])
+      .fromTo(
+        ".myImg",
+        {
+          autoAlpha: 0,
+          duration: 1,
+        },
+        {
+          autoAlpha: 1,
+        },
+        "<+=.2"
+      )
+      .fromTo(
+        ".name",
+        {
+          autoAlpha: 0,
+          y: "100",
+          duration: 0,
+        },
+        {
+          autoAlpha: 1,
+          y: "0",
+          duration: 1,
+        },
+        "<"
+      )
+      .fromTo(
+        ".nameIs",
+        {
+          autoAlpha: 0,
+          y: "100",
+          duration: 0,
+        },
+        {
+          autoAlpha: 1,
+          y: "0",
+          duration: 1,
+        },
+        "<"
+      )
+      .fromTo(
+        ".typeWriter",
+        {
+          autoAlpha: 0,
+          duration: 1,
+        },
+        {
+          autoAlpha: 1,
+          ease: "SlowMo.ease.config(0.7, 0.7, false)",
+          duration: 1,
+        },
+        "-=0.5"
+      );
+  }, []);
   return (
     <Fragment>
       <div className={`${styles.slider} slideDown`}>
@@ -148,7 +155,7 @@ const Home = () => {
               Hi, my Name is
             </span>
           </div>
-          <h2 className={`${styles.s__nameTxt}`}>Dharmik Upadhyay</h2>
+          <h2 className={`${styles.s__nameTxt} name`}>Dharmik Upadhyay</h2>
           <div className={`${styles.s__typingEffectContainer} typeWriter`}>
             <span>I{`'`}m a</span>
 
@@ -157,9 +164,9 @@ const Home = () => {
                 autoStart: true,
                 loop: true,
                 strings: [
-                  'Software Engineer',
-                  'Web developer',
-                  'Android developer',
+                  "Software Engineer",
+                  "Web developer",
+                  "Android developer",
                 ],
                 delay: 40,
               }}
@@ -173,13 +180,13 @@ const Home = () => {
         </div>
 
         <div className={`${styles.s__imageOuterContainer}`}>
-          <div className={`${styles.s__imageContainer}`}>
+          <div className={`${styles.s__imageContainer} borders`}>
             <div className={`${styles.s__myImg} myImg`}></div>
           </div>
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
