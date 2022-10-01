@@ -1,4 +1,4 @@
-@import '/styles/variables.scss';
+@import "/styles/variables.scss";
 
 .slider {
   position: fixed;
@@ -26,6 +26,7 @@
     font-family: $secondaryFont;
     color: $grayColor;
   }
+
   .name {
     color: $whiteColor;
   }
@@ -33,25 +34,38 @@
 
 .s {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.8fr 1.2fr;
   height: 100vh;
+
+  @media (min-width: 576px) {
+    grid-template-rows: 1fr 1fr;
+  }
 
   &__nameTxt {
     color: $whiteColor;
-    font-family: 'Yuji Boku', serif;
+    font-family: "Yuji Boku", serif;
     font-size: clamp(2rem, 8vw, 5rem);
 
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0.2em;
+
+    @media (min-width: 576px) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
     font-size: 1.5rem;
     font-weight: 800;
     margin-left: 2rem;
+    margin-bottom: 4rem;
+
+    @media (min-width: 576px) {
+    }
   }
 
   &__subTitle {
@@ -65,24 +79,32 @@
       font-size: 2rem;
       position: relative;
       left: 0;
-      font-family: 'Hubballi', cursive;
+      font-family: "Hubballi", cursive;
       font-weight: 800;
     }
   }
 
   &__imageOuterContainer {
     position: relative;
-    margin: 0 5rem;
+    margin: 0 2rem;
+    height: 80%;
+    @media (min-width: 576px) {
+      height: 100%;
+      margin: 0 5rem;
+    }
   }
 
   &__imageContainer {
-    height: 70vh;
+    height: 100%;
+    @media (min-width: 576px) {
+      height: 70vh;
+    }
   }
 
   &__myImg {
     width: 100%;
     height: 100%;
-    background-image: url('/profilePic.jpeg');
+    background-image: url("/profilePic.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,7 +112,7 @@
   }
 
   &__imageContainer::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -5%;
     left: -5%;
@@ -100,7 +122,7 @@
     border-top: 4px solid cyan;
   }
   &__imageContainer::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5%;
     right: -5%;
@@ -117,10 +139,11 @@
     align-items: center;
   }
 }
+
 .Typewriter {
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'Hubballi', cursive;
+  font-family: "Hubballi", cursive;
   position: absolute;
   top: 0;
   margin-left: 70px;

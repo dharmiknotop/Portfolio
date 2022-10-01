@@ -1,12 +1,13 @@
-import React from 'react'
-import { FiLinkedin } from 'react-icons/fi'
-import { FaTwitter } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
+import styles from "./css/rightNavbar.module.scss";
+
+import { FiLinkedin } from "react-icons/fi";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
 
 const RightNavbar = () => {
   return (
     <>
-      <div className="right-navbar">
+      <div className={`${styles.s__container}`}>
         <div className="item">
           <FiLinkedin size={20} />
         </div>
@@ -22,7 +23,7 @@ const RightNavbar = () => {
         <div id="verticaline"></div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default RightNavbar
+export default RightNavbar;

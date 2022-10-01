@@ -1,13 +1,59 @@
-@import '/styles/variables.scss';
+@import "/styles/variables.scss";
 
-.navbar_brand {
-  margin-left: 1rem;
-  font-size: 1.5rem;
-}
-.title {
-  font-family: $secondaryFont;
-  color: $grayColor;
-}
-.name {
-  color: $whiteColor;
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  background: #0a192fc7;
+  padding: 10px 0;
+  @media (min-width: 576px) {
+    justify-content: space-between;
+  }
+
+  &__navbar_brand {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+  &__title {
+    font-family: $secondaryFont;
+    color: $grayColor;
+  }
+  &__name {
+    color: $whiteColor;
+  }
+
+  &__ulContainer {
+    display: none;
+    list-style: none;
+
+    @media (min-width: 576px) {
+      display: block;
+    }
+  }
+
+  &__liItem {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: "Shippori Antique B1", sans-serif;
+    padding: 0 20px;
+  }
+
+  &__itemLink {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: cyan;
+      transition: 0.2s all ease-in-out;
+    }
+  }
 }

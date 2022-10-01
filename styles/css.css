@@ -1,7 +1,7 @@
 .Myimg {
   width: 100%;
   height: 70vh;
-  background-image: url('/profilePic.jpeg');
+  background-image: url("/profilePic.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,7 +82,7 @@
 .Typewriter {
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'Hubballi', cursive;
+  font-family: "Hubballi", cursive;
   position: absolute;
   top: 0;
   margin-left: 70px;
@@ -112,7 +112,7 @@
   position: relative;
 }
 .Myimg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 1rem;
   left: 0;
@@ -122,7 +122,7 @@
   border-top: 4px solid cyan;
 }
 .Myimg::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 1rem;
   right: 0;
@@ -213,7 +213,7 @@
 }
 
 .ProjectImg .BorderOverlay::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 7%;
   left: 7%;
@@ -265,38 +265,11 @@
   align-items: center;
 }
 
-header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 50px;
-  justify-content: space-between;
-  align-items: center;
-  background: #0a192fc7;
-  padding: 10px 0;
-}
-header ul {
-  list-style: none;
-}
-
 header li a:hover {
   color: cyan;
   transition: 0.2s all ease-in;
 }
-header li {
-  font-family: 'Shippori Antique B1', sans-serif;
-  font-size: 1.1rem;
-  padding: 0 20px;
-}
-header li,
-header li a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
+
 @media only screen and (max-width: 360px) {
   .DivideDiv {
     display: grid;

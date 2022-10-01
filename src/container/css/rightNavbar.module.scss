@@ -1,0 +1,18 @@
+.s {
+  &__container {
+    display: none;
+
+    position: fixed;
+
+    bottom: 0%;
+    right: 0%;
+    height: 50%;
+    padding-right: 5vh;
+
+    @media (min-width: 576px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

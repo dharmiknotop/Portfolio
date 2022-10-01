@@ -1,7 +1,11 @@
-@import '/styles/variables.scss';
+@import "/styles/variables.scss";
 
 .heading {
   font-family: $secondaryFont;
+  text-align: center;
+  @media (min-width: 576px) {
+    text-align: left;
+  }
 }
 
 .expContainer {
@@ -52,26 +56,37 @@
 }
 
 .expCompaniesContainerOuter {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;
-
-  margin: 15vh 10vw 15vh;
+  padding: 1rem 0 4rem;
+  @media (min-width: 576px) {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    padding: 15vh 10vw 15vh;
+  }
 }
 
 .expCompaniesContainer {
+  display: flex;
+  justify-content: center;
   list-style: none;
+  overflow-x: auto;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
 
   &__activeTxt {
-    border-left: 2px solid cyan !important;
-    transition: 2s all ease-in-out;
-    background-color: #112240;
     color: cyan;
+    background-color: #112240;
+
+    border-bottom: 2px solid cyan;
+    transition: 2s all ease-in-out;
+
+    @media (min-width: 576px) {
+      border-left: 2px solid cyan !important;
+      border-bottom: 0px;
+    }
   }
 
   li {
     padding: 1rem;
-    border-left: 2px solid gray;
-    margin-right: 2rem;
 
     &:hover {
       background-color: #112240;
@@ -79,5 +94,21 @@
       color: cyan;
       transition: 0.3s all ease-in-out;
     }
+
+    @media (min-width: 576px) {
+      margin-right: 2rem;
+      border-left: 2px solid gray;
+    }
+  }
+  @media (min-width: 576px) {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+
+.expTxtContainer {
+  margin: 0 15px;
+  @media (min-width: 576px) {
+    margin: 0 0px;
   }
 }
