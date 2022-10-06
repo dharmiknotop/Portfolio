@@ -1,9 +1,15 @@
-@import '/styles/variables.scss';
+@import "/styles/variables.scss";
 
 .s {
   margin-bottom: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  &__reverseGridForMobile {
+    @media (max-width: 576px) {
+      flex-direction: column-reverse !important;
+    }
+  }
 
   &__container {
     visibility: hidden;
@@ -12,10 +18,18 @@
 
   &__projectTitle {
     font-family: $primaryFont;
+    text-align: center;
+    @media (min-width: 576px) {
+      text-align: left;
+    }
   }
 
   &__projectDescContainer {
     color: $grayColor;
+    text-align: center;
+    @media (min-width: 576px) {
+      text-align: left;
+    }
   }
 
   &__projectDesc {
@@ -58,7 +72,7 @@
   }
 
   &__borderedOverlay::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 7%;
     left: 7%;
@@ -68,11 +82,8 @@
     z-index: -1;
   }
 
-  @media (max-width: 360px) {
-    .DivideDiv {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: unset;
-    }
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
   }
 }

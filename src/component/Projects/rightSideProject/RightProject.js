@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { gsap } from 'gsap/dist/gsap'
-import TechIcon from './Techicon'
-import Image from 'next/image'
-import styles from '../css/projects.module.scss'
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
+import TechIcon from "./Techicon";
+import Image from "next/image";
+import styles from "../css/projects.module.scss";
 
 const RightProjects = ({
   projectName,
@@ -20,9 +20,9 @@ const RightProjects = ({
   iconName3,
 }) => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
-      '.ProjectRAnimation',
+      ".ProjectRAnimation",
       {
         x: 50,
         autoAlpha: 0,
@@ -33,16 +33,16 @@ const RightProjects = ({
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
-      },
-    )
+      }
+    );
     gsap.fromTo(
-      '.overlay-left',
+      ".overlay-left",
       {
         x: -50,
         autoAlpha: 0,
@@ -53,18 +53,18 @@ const RightProjects = ({
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           // markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
-      },
-    )
-  }, [])
+      }
+    );
+  }, []);
   return (
     <>
-      <div className={`${styles.s} Project`}>
+      <div className={`${styles.s} ${styles.s__reverseGridForMobile} Project`}>
         <div className={styles.s__secondSectionContainer}>
           <a href={projectLink} rel="noreferrer" target="_blank">
             <div className={`${styles.s__imgContainer} overlay-left`}>
@@ -93,7 +93,7 @@ const RightProjects = ({
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default RightProjects
+export default RightProjects;
