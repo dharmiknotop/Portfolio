@@ -1,7 +1,7 @@
-import { gsap } from "gsap/dist/gsap";
-import { useState, useEffect, useContext, useRef, Fragment } from "react";
-import Typewriter from "typewriter-effect";
-import styles from "./css/home.module.scss";
+import { gsap } from 'gsap/dist/gsap';
+import { useState, useEffect, useContext, useRef, Fragment } from 'react';
+import Typewriter from 'typewriter-effect';
+import styles from './css/home.module.scss';
 
 const Home = () => {
   const tl = useRef();
@@ -9,81 +9,81 @@ const Home = () => {
     tl.current = gsap
       .timeline()
       .fromTo(
-        ".firstLine",
+        '.firstLine',
         {
           autoAlpha: 0,
-          y: "-100%",
+          y: '-100%',
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: "0%",
+          y: '0%',
           duration: 1,
         }
       )
       .fromTo(
-        ".secondLine",
+        '.secondLine',
         {
           autoAlpha: 0,
-          y: "-100%",
+          y: '-100%',
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: "0%",
+          y: '0%',
           duration: 1,
         },
-        "-=0.6"
+        '-=0.6'
       )
       .fromTo(
-        ".thirdLine",
+        '.thirdLine',
         {
           autoAlpha: 0,
-          y: "-100%",
+          y: '-100%',
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: "0%",
+          y: '0%',
           duration: 1,
         },
-        "-=0.7"
+        '-=0.7'
       )
       .fromTo(
-        ".slideDown",
+        '.slideDown',
         {
-          y: "0%",
+          y: '0%',
         },
         {
-          ease: "SlowMo.ease.config(0.7, 0.7, false)",
-          y: "-100%",
+          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
+          y: '-100%',
           duration: 1,
         },
-        "+=.5"
+        '+=.5'
       )
       .to(
-        ".slideUp",
+        '.slideUp',
         {
-          y: "-100%",
+          y: '-100%',
           duration: 1,
         },
-        "-=0.8"
+        '-=0.8'
       )
       .fromTo(
-        ".borders",
+        '.borders',
         {
           autoAlpha: 0,
           duration: 1,
         },
         {
           autoAlpha: 1,
-          ease: "SlowMo.ease.config(0.7, 0.7, false)",
+          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
           duration: 1,
         },
-        "-=0.5"
+        '-=0.5'
       )
       .fromTo(
-        ".myImg",
+        '.myImg',
         {
           autoAlpha: 0,
           duration: 1,
@@ -91,48 +91,48 @@ const Home = () => {
         {
           autoAlpha: 1,
         },
-        "<+=.2"
+        '<+=.2'
       )
       .fromTo(
-        ".name",
+        '.name',
         {
           autoAlpha: 0,
-          y: "100",
+          y: '100',
           duration: 0,
         },
         {
           autoAlpha: 1,
-          y: "0",
+          y: '0',
           duration: 1,
         },
-        "<"
+        '<'
       )
       .fromTo(
-        ".nameIs",
+        '.nameIs',
         {
           autoAlpha: 0,
-          y: "100",
+          y: '100',
           duration: 0,
         },
         {
           autoAlpha: 1,
-          y: "0",
+          y: '0',
           duration: 1,
         },
-        "<"
+        '<'
       )
       .fromTo(
-        ".typeWriter",
+        '.typeWriter',
         {
           autoAlpha: 0,
           duration: 1,
         },
         {
           autoAlpha: 1,
-          ease: "SlowMo.ease.config(0.7, 0.7, false)",
+          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
           duration: 1,
         },
-        "-=0.5"
+        '-=0.5'
       );
   }, []);
   return (
@@ -163,11 +163,7 @@ const Home = () => {
               options={{
                 autoStart: true,
                 loop: true,
-                strings: [
-                  "Software Engineer",
-                  "Web developer",
-                  "Android developer",
-                ],
+                strings: ['Software Engineer', 'Web developer'],
                 delay: 40,
               }}
             />

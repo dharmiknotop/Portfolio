@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef, Fragment } from "react";
-import TechStack from "../../container/Techstack";
-import { FaUserAlt } from "react-icons/fa";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { gsap } from "gsap/dist/gsap";
-import styles from "./css/about.module.scss";
+import { useState, useEffect, useRef, Fragment } from 'react';
+import TechStack from '../../container/Techstack';
+import { FaUserAlt } from 'react-icons/fa';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap/dist/gsap';
+import styles from './css/about.module.scss';
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
   const Tl = useRef();
   useEffect(() => {
     gsap.fromTo(
-      ".aboutMeTitle",
+      '.aboutMeTitle',
       {
         y: -50,
         autoAlpha: 0,
@@ -21,16 +21,15 @@ const About = () => {
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: ".myImg",
-          markers: true,
-          start: "bottom center",
-          triggerActions: "play none none reverse",
-          end: "bottom bottom ",
+          trigger: '.myImg',
+          start: 'bottom center',
+          triggerActions: 'play none none reverse',
+          end: 'bottom bottom ',
         },
       }
     );
     gsap.fromTo(
-      ".aboutMeContainer",
+      '.aboutMeContainer',
       {
         x: -100,
         autoAlpha: 0,
@@ -40,17 +39,17 @@ const About = () => {
         autoAlpha: 1,
         x: 0,
         scrollTrigger: {
-          trigger: ".myImg",
+          trigger: '.myImg',
           // markers: true,
-          start: "bottom center",
-          triggerActions: "play none none reverse",
-          end: "bottom bottom ",
+          start: 'bottom center',
+          triggerActions: 'play none none reverse',
+          end: 'bottom bottom ',
         },
       },
-      "<"
+      '<'
     );
     gsap.fromTo(
-      ".skillTitle",
+      '.skillTitle',
       {
         x: 100,
         autoAlpha: 0,
@@ -60,17 +59,17 @@ const About = () => {
         autoAlpha: 1,
         x: 0,
         scrollTrigger: {
-          trigger: ".myImg",
+          trigger: '.myImg',
           // markers: true,
-          start: "bottom center",
-          triggerActions: "play none none reverse",
-          end: "bottom bottom ",
+          start: 'bottom center',
+          triggerActions: 'play none none reverse',
+          end: 'bottom bottom ',
         },
       },
-      "<"
+      '<'
     );
     gsap.fromTo(
-      ".skillsContainer",
+      '.skillsContainer',
       {
         x: 100,
         autoAlpha: 0,
@@ -80,14 +79,14 @@ const About = () => {
         autoAlpha: 1,
         x: 0,
         scrollTrigger: {
-          trigger: ".myImg",
+          trigger: '.myImg',
           // markers: true,
-          start: "bottom center",
-          triggerActions: "play none none reverse",
-          end: "bottom bottom ",
+          start: 'bottom center',
+          triggerActions: 'play none none reverse',
+          end: 'bottom bottom ',
         },
       },
-      "<"
+      '<'
     );
   }, []);
 
@@ -95,13 +94,13 @@ const About = () => {
     <div>
       <div>
         <h1 className={`${styles.heading} aboutMeTitle`}>
-          <FaUserAlt color="cyan" size={30} style={{ marginRight: "1.5rem" }} />
+          <FaUserAlt color="cyan" size={30} style={{ marginRight: '1.5rem' }} />
           About Me
         </h1>
 
         <div
           className={styles.s}
-          style={{ fontSize: "1.4rem", fontWeight: "800" }}
+          style={{ fontSize: '1.4rem', fontWeight: '800' }}
         >
           <div className={`${styles.s__aboutMeContainer} aboutMeContainer `}>
             <h2 className={`${styles.s__knowMeSectionTitle} `}>
@@ -113,7 +112,7 @@ const About = () => {
               leads to the success of the overall product.
             </p>
             <p>
-              I am currently Doing diploma in{" "}
+              I am currently Doing diploma in{' '}
               <span>Gandhinagar Government Polytechnic </span>
               college. I live in Mehsana, Gujrat and currently 18 year old.
             </p>

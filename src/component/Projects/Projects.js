@@ -1,10 +1,10 @@
-import TechIcon from './rightSideProject/Techicon'
-import { useEffect, useRef } from 'react'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { gsap } from 'gsap/dist/gsap'
-import { useState } from 'react'
-import Image from 'next/image'
-import styles from './css/projects.module.scss'
+import TechIcon from './rightSideProject/Techicon';
+import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap/dist/gsap';
+import { useState } from 'react';
+import Image from 'next/image';
+import styles from './css/projects.module.scss';
 
 const LeftSideProject = ({
   projectName,
@@ -20,13 +20,13 @@ const LeftSideProject = ({
   iconName2,
   iconName3,
 }) => {
-  const [state, setState] = useState('true')
+  const [state, setState] = useState('true');
 
   const ChangeTheState = () => {
-    setState('false')
-  }
+    setState('false');
+  };
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     gsap.fromTo(
@@ -42,13 +42,13 @@ const LeftSideProject = ({
         duration: 1,
         scrollTrigger: {
           trigger: '.Project',
-          markers: true,
+          //   markers: true,
           start: 'top center',
           triggerActions: 'play none none reverse',
           end: 'bottom bottom ',
         },
-      },
-    )
+      }
+    );
     gsap.fromTo(
       '.overlay-right',
       {
@@ -67,9 +67,9 @@ const LeftSideProject = ({
           triggerActions: 'play none none reverse',
           end: 'bottom bottom ',
         },
-      },
-    )
-  }, [])
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -102,7 +102,7 @@ const LeftSideProject = ({
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default LeftSideProject
+export default LeftSideProject;
