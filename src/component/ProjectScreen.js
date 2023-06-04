@@ -43,9 +43,9 @@ const Projectscreen = () => {
       />
       <RightProjects
         projectName="E-commerce Website"
-        projectInfo="An E-commrece website which can take payments, Can register Users, Has a Cart. Tech Stack used"
+        projectInfo="An e-commrece website which can take payments, Can register Users, Has a Cart. Tech Stack used"
         projectImage={e_commerceImg}
-        projectLink={'https://ecommerce-mern-parth1.herokuapp.com/'}
+        projectLink={'https://e-commerce-frontend-grb0.onrender.com/'}
         projectIcon={<FaReact />}
         projectIcon1={<FaNodeJs />}
         projectIcon2={<SiMongodb />}

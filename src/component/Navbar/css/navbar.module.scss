@@ -1,4 +1,4 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
 .nav {
   display: flex;
@@ -42,14 +42,14 @@
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    font-family: "Shippori Antique B1", sans-serif;
+    font-family: 'Shippori Antique B1', sans-serif;
     padding: 0 20px;
   }
 
   &__itemLink {
     display: inline-block;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
 
     &:hover {
       color: cyan;

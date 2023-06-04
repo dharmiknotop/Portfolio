@@ -1,11 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import styles from "./css/navbar.module.scss";
+import React from 'react';
+import Link from 'next/link';
+import styles from './css/navbar.module.scss';
 const Navbar = () => {
   return (
     <div>
       <header className={styles.nav}>
-        {" "}
+        {' '}
         <div
           className={`${styles.nav__title} ${styles.nav__navbar_brand} navbar-brand `}
         >
@@ -14,18 +14,18 @@ const Navbar = () => {
         <nav>
           <ul className={`${styles.nav__ulContainer}`}>
             <li className={styles.nav__liItem}>
-              <Link className={styles.nav__itemLink} href="/">
-                <a>Home</a>
+              <Link href="/">
+                <a className={styles.nav__itemLink}>Home</a>
               </Link>
             </li>
             <li className={styles.nav__liItem}>
-              <Link className={styles.nav__itemLink} href="/">
-                <a>About</a>
+              <Link href="/">
+                <a className={styles.nav__itemLink}>About</a>
               </Link>
             </li>
             <li className={styles.nav__liItem}>
-              <Link className={styles.nav__itemLink} href="/">
-                <a>Projects</a>
+              <Link href="/">
+                <a className={styles.nav__itemLink}>Projects</a>
               </Link>
             </li>
           </ul>
