@@ -8,87 +8,87 @@ import styles from './css/about.module.scss';
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
   const Tl = useRef();
-  useEffect(() => {
-    gsap.fromTo(
-      '.aboutMeTitle',
-      {
-        y: -50,
-        autoAlpha: 0,
-        duration: 1,
-      },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.myImg',
-          start: 'bottom center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
-        },
-      }
-    );
-    gsap.fromTo(
-      '.aboutMeContainer',
-      {
-        x: -100,
-        autoAlpha: 0,
-      },
-      {
-        duration: 1,
-        autoAlpha: 1,
-        x: 0,
-        scrollTrigger: {
-          trigger: '.myImg',
-          // markers: true,
-          start: 'bottom center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
-        },
-      },
-      '<'
-    );
-    gsap.fromTo(
-      '.skillTitle',
-      {
-        x: 100,
-        autoAlpha: 0,
-      },
-      {
-        duration: 1,
-        autoAlpha: 1,
-        x: 0,
-        scrollTrigger: {
-          trigger: '.myImg',
-          // markers: true,
-          start: 'bottom center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
-        },
-      },
-      '<'
-    );
-    gsap.fromTo(
-      '.skillsContainer',
-      {
-        x: 100,
-        autoAlpha: 0,
-      },
-      {
-        duration: 1,
-        autoAlpha: 1,
-        x: 0,
-        scrollTrigger: {
-          trigger: '.myImg',
-          // markers: true,
-          start: 'bottom center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
-        },
-      },
-      '<'
-    );
-  }, []);
+  //   useEffect(() => {
+  //     gsap.fromTo(
+  //       '.aboutMeTitle',
+  //       {
+  //         y: -50,
+  //         autoAlpha: 0,
+  //         duration: 1,
+  //       },
+  //       {
+  //         y: 0,
+  //         autoAlpha: 1,
+  //         duration: 1,
+  //         scrollTrigger: {
+  //           trigger: '.myImg',
+  //           start: 'bottom center',
+  //           triggerActions: 'play none none reverse',
+  //           end: 'bottom bottom ',
+  //         },
+  //       }
+  //     );
+  //     gsap.fromTo(
+  //       '.aboutMeContainer',
+  //       {
+  //         x: -100,
+  //         autoAlpha: 0,
+  //       },
+  //       {
+  //         duration: 1,
+  //         autoAlpha: 1,
+  //         x: 0,
+  //         scrollTrigger: {
+  //           trigger: '.myImg',
+  //           // markers: true,
+  //           start: 'bottom center',
+  //           triggerActions: 'play none none reverse',
+  //           end: 'bottom bottom ',
+  //         },
+  //       },
+  //       '<'
+  //     );
+  //     gsap.fromTo(
+  //       '.skillTitle',
+  //       {
+  //         x: 100,
+  //         autoAlpha: 0,
+  //       },
+  //       {
+  //         duration: 1,
+  //         autoAlpha: 1,
+  //         x: 0,
+  //         scrollTrigger: {
+  //           trigger: '.myImg',
+  //           // markers: true,
+  //           start: 'bottom center',
+  //           triggerActions: 'play none none reverse',
+  //           end: 'bottom bottom ',
+  //         },
+  //       },
+  //       '<'
+  //     );
+  //     gsap.fromTo(
+  //       '.skillsContainer',
+  //       {
+  //         x: 100,
+  //         autoAlpha: 0,
+  //       },
+  //       {
+  //         duration: 1,
+  //         autoAlpha: 1,
+  //         x: 0,
+  //         scrollTrigger: {
+  //           trigger: '.myImg',
+  //           // markers: true,
+  //           start: 'bottom center',
+  //           triggerActions: 'play none none reverse',
+  //           end: 'bottom bottom ',
+  //         },
+  //       },
+  //       '<'
+  //     );
+  //   }, []);
 
   return (
     <div>

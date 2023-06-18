@@ -1,17 +1,39 @@
 @import '/styles/variables.scss';
 
+.s {
+  &__profileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 60px;
+  }
+
+  &__profile {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 100%;
+    object-fit: contain;
+  }
+}
+
 .nav {
-  display: flex;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 50px;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: 70px;
   background: #0a192fc7;
+
   padding: 10px 0;
+
+  z-index: 9999;
   @media (min-width: 576px) {
     justify-content: space-between;
   }
@@ -31,6 +53,8 @@
   &__ulContainer {
     display: none;
     list-style: none;
+
+    margin: 0 100px;
 
     @media (min-width: 576px) {
       display: block;

@@ -1,7 +1,11 @@
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap/dist/gsap';
-import { useState, useEffect, useContext, useRef, Fragment } from 'react';
-import Typewriter from 'typewriter-effect';
 import styles from './css/home.module.scss';
+
+import { FiLinkedin } from 'react-icons/fi';
+import { FaTwitter } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
+import { SiLeetcode } from 'react-icons/si';
 
 const Home = () => {
   const tl = useRef();
@@ -70,118 +74,192 @@ const Home = () => {
         '-=0.8'
       )
       .fromTo(
-        '.borders',
+        '.title',
         {
           autoAlpha: 0,
-          duration: 1,
         },
         {
           autoAlpha: 1,
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
+
           duration: 1,
         },
-        '-=0.5'
+        '-=0'
       )
       .fromTo(
-        '.myImg',
+        '.subTxt',
         {
           autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+
           duration: 1,
         },
-        {
-          autoAlpha: 1,
-        },
-        '<+=.2'
+        '-=.6'
       )
+
       .fromTo(
-        '.name',
+        '.projectBtn',
         {
           autoAlpha: 0,
-          y: '100',
-          duration: 0,
         },
         {
           autoAlpha: 1,
-          y: '0',
+
+          duration: 1,
+        },
+        '-=.5'
+      )
+      .fromTo(
+        '.navItem1',
+        {
+          autoAlpha: 0,
+          x: '100%',
+        },
+        {
+          x: '-20%',
+          autoAlpha: 1,
+
+          duration: 0.8,
+        },
+        '-=.5'
+      )
+      .to(
+        '.navItem1',
+        {
+          x: '0%',
+          duration: 0.2,
+        },
+        '>'
+      )
+      .fromTo(
+        '.navItem2',
+        {
+          autoAlpha: 0,
+          x: '100%',
+        },
+        {
+          x: '-10%',
+          autoAlpha: 1,
+
+          duration: 0.8,
+        },
+        '-=.5'
+      )
+      .to(
+        '.navItem2',
+        {
+          x: '0%',
+          duration: 0.2,
+        },
+        '>'
+      )
+      .fromTo(
+        '.navItem3',
+        {
+          autoAlpha: 0,
+          x: '100%',
+        },
+        {
+          x: '-10%',
+          autoAlpha: 1,
+
+          duration: 0.8,
+        },
+        '-=.5'
+      )
+      .to(
+        '.navItem3',
+        {
+          x: '0%',
+          duration: 0.2,
+        },
+        '>'
+      )
+      .fromTo(
+        '.logo',
+        {
+          autoAlpha: 0,
+        },
+        {
+          autoAlpha: 1,
+
           duration: 1,
         },
         '<'
       )
       .fromTo(
-        '.nameIs',
+        '.socialMediaContainer',
         {
           autoAlpha: 0,
-          y: '100',
-          duration: 0,
+          x: '-10%',
         },
         {
           autoAlpha: 1,
-          y: '0',
-          duration: 1,
+          x: '50%',
+          duration: 0.5,
         },
-        '<'
+        '>'
       )
-      .fromTo(
-        '.typeWriter',
+      .to(
+        '.socialMediaContainer',
         {
-          autoAlpha: 0,
-          duration: 1,
+          x: '0%',
+          duration: 0.5,
         },
-        {
-          autoAlpha: 1,
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
-          duration: 1,
-        },
-        '-=0.5'
+        '>'
       );
   }, []);
+
   return (
-    <Fragment>
+    <div className={styles.s}>
       <div className={`${styles.slider} slideDown`}>
         <div className={`${styles.slider__centerTxt} slideUp`}>
-          <div className="firstLine">
+          <div className={`${styles.slider__firstLine} firstLine`}>
             Welcome to <br />
           </div>
-          <div className={`${styles.title} secondLine`}>
-            &lt;<span className={`${styles.name}`}> Dharmik </span> /&gt;
+          <div className={`${styles.slider__secondLine} secondLine`}>
+            &lt;
+            <span className={`${styles.slider__title} secondLine`}>
+              {' '}
+              Dharmik{' '}
+            </span>{' '}
+            /&gt;
           </div>
-          <div className="thirdLine"> Portfolio website.</div>
-        </div>
-      </div>
-      <div className={`${styles.s}`}>
-        <div className={`${styles.s__container}`}>
-          <div>
-            <span className={`${styles.s__subTitle} nameIs`}>
-              Hi, my Name is
-            </span>
-          </div>
-          <h2 className={`${styles.s__nameTxt} name`}>Dharmik Upadhyay</h2>
-          <div className={`${styles.s__typingEffectContainer} typeWriter`}>
-            <span>I{`'`}m a</span>
-
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-                strings: ['Software Engineer', 'Web developer'],
-                delay: 40,
-              }}
-            />
-          </div>
-          {/* <span className="gray My-Info">
-              I am Enthusiast in DevOps, Open Source Projects and Software
-              Development. Currently Studying in 3rd sem of Information
-              Technology In government polytechnic.
-            </span> */}
-        </div>
-
-        <div className={`${styles.s__imageOuterContainer}`}>
-          <div className={`${styles.s__imageContainer} borders`}>
-            <div className={`${styles.s__myImg} myImg`}></div>
+          <div className={`${styles.slider__thirdLine} thirdLine`}>
+            {' '}
+            Portfolio website.
           </div>
         </div>
       </div>
-    </Fragment>
+
+      <div className={`${styles.s__socialMediaContainer} socialMediaContainer`}>
+        <div className={styles.s__socialIcon}>
+          <FiLinkedin />
+        </div>
+        <div className={styles.s__socialIcon}>
+          <FaTwitter />
+        </div>
+        <div className={styles.s__socialIcon}>
+          <AiFillGithub />
+        </div>
+        <div className={styles.s__socialIcon}>
+          <SiLeetcode />
+        </div>
+      </div>
+
+      <div className={`${styles.s__titleContainer} title`}>
+        <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{' '}
+        <h1 className={styles.s__myName}>DHARMIK UPADHYAYA</h1>
+      </div>
+
+      <div className={`${styles.s__subTxt} subTxt`}>
+        A Frontend focused Web Developer building the Frontend of Websites and
+        Web Applications that leads to the success of the overall product
+      </div>
+
+      <button className={`${styles.s__projectBtn} projectBtn`}>Projects</button>
+    </div>
   );
 };
 

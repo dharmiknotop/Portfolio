@@ -1,12 +1,11 @@
-import React, { Fragment } from 'react'
-import Home from './home/Home'
-import About from './aboutSection/About'
-import ProjectScreen from './ProjectScreen'
-import RightNavbar from '../container/RightNavbar'
-import Contact from './contact/Contact'
-import Navbar from './Navbar/Navbar'
-import Experience from './experienceSection/MyExperience'
-import styles from './css/homeScreen.module.scss'
+import React, { Fragment } from 'react';
+import Home from './home/Home';
+import About from './aboutSection/About';
+import ProjectScreen from './ProjectScreen';
+import Contact from './contact/Contact';
+import Navbar from './Navbar/Navbar';
+import Experience from './experienceSection/MyExperience';
+import styles from './css/homeScreen.module.scss';
 
 const Homescreen = () => {
   return (
@@ -18,12 +17,11 @@ const Homescreen = () => {
           <About />
           <Experience />
           <ProjectScreen />
-          <RightNavbar />
           <Contact />
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Homescreen
+export default Homescreen;
