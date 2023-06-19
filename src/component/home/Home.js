@@ -83,7 +83,7 @@ const Home = () => {
 
           duration: 1,
         },
-        '-=0'
+        '-=0.5'
       )
       .fromTo(
         '.subTxt',

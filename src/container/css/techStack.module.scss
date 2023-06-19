@@ -4,9 +4,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $cyanColor;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin: 0.5rem;
+
+    min-width: 70px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 39px;
+    color: #fffbfb;
+
+    text-decoration: none;
+
+    padding: 2.5px 15px;
+    margin: 0 0.5rem 1rem;
+
+    background: transparent;
+
+    border: 3px solid #03ffff;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px #04fff0;
+    outline: none;
+    transition: 0.2s all linear;
+
+    &:hover {
+      background-color: cyan;
+      transform: translate(-1%, -8%);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    margin-right: 8px;
   }
 }

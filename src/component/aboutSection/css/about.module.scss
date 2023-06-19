@@ -1,12 +1,5 @@
-@import "/styles/variables.scss";
+@import '/styles/variables.scss';
 
-.heading {
-  font-family: $secondaryFont;
-  text-align: center;
-  @media (min-width: 576px) {
-    text-align: left;
-  }
-}
 .s {
   display: grid;
   grid-template-rows: 1.2fr 0.8fr;
@@ -16,12 +9,48 @@
     margin: 2rem 0 8rem;
   }
 
+  &__heading {
+    position: relative;
+
+    font-size: 36px;
+    font-family: $secondaryFont;
+    text-align: center;
+
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+
+    // @media (min-width: 576px) {
+    //   text-align: left;
+    // }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 50px;
+      height: 8px;
+
+      background-color: #00fff0;
+
+      border-radius: 10px;
+    }
+  }
+
   &__aboutMeContainer {
+    font-size: 22px;
+    line-height: 30px;
+
     color: $grayColor;
     text-align: center;
+
     span {
       color: $cyanColor;
     }
+
+    margin-right: 35px;
 
     @media (min-width: 576px) {
       text-align: left;
@@ -33,20 +62,18 @@
     color: $whiteColor;
     text-align: center;
     font-family: $primaryFont;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 28px;
+
+    margin-bottom: 50px;
 
     @media (min-width: 576px) {
       text-align: left;
     }
   }
 
-  &__skillsSectionTitle {
-    margin-left: 0.5rem;
-    margin-bottom: 1.2rem;
-  }
-
   &__skillsOuterContainer {
+    margin-left: 35px;
+
     @media (min-width: 576px) {
       padding-left: 15px;
     }
