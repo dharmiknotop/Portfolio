@@ -16,8 +16,8 @@ import weChatImg from './Projects/img/weChatProject.JPG';
 
 const Projectscreen = () => {
   return (
-    <div className="container">
-      <h1 className={styles.heading}>
+    <div className="container" id="projects">
+      <h1 className={styles.s__heading}>
         <FaRegLightbulb
           color="cyan"
           style={{ marginRight: '1rem' }}
@@ -25,11 +25,16 @@ const Projectscreen = () => {
         />
         My Projects
       </h1>
+
+      <h1 className={`${styles.s__desc}`}>
+        Here you will find some of the personal and clients projects that I
+        created with each project containing its own case study
+      </h1>
       <br />
       <br />
       <LeftSideProject
         projectName="We-Chat App"
-        projectInfo="chatting website where you can talk to other registered users "
+        projectInfo="Chatting website where you can talk to other registered users with excellent features. Tech stach used for this is: "
         projectImage={weChatImg}
         projectLink={'https://wechat-app.vercel.app'}
         projectIcon={<SiNextdotjs />}
@@ -43,7 +48,7 @@ const Projectscreen = () => {
       />
       <RightProjects
         projectName="E-commerce Website"
-        projectInfo="An e-commrece website which can take payments, Can register Users, Has a Cart. Tech Stack used"
+        projectInfo="An e-commrece website which can take payments, Can register Users, Has a Cart. Tech Stack used for this is:"
         projectImage={e_commerceImg}
         projectLink={'https://e-commerce-frontend-grb0.onrender.com/'}
         projectIcon={<FaReact />}

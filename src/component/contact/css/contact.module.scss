@@ -11,6 +11,8 @@
   &__title {
     font-size: 3rem;
     font-family: $primaryFont;
+
+    margin-bottom: 30px;
   }
 
   &__container {
@@ -25,5 +27,9 @@
 
     font-size: 1.5rem;
     font-family: $primaryFont;
+  }
+
+  &__icon {
+    margin-right: 20px;
   }
 }

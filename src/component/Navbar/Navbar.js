@@ -20,17 +20,17 @@ const Navbar = () => {
         <nav>
           <ul className={`${styles.nav__ulContainer}`}>
             <li className={styles.nav__liItem}>
-              <Link href="/">
+              <Link href="#home">
                 <a className={`${styles.nav__itemLink} navItem1`}>Home</a>
               </Link>
             </li>
             <li className={styles.nav__liItem}>
-              <Link href="/">
+              <Link href="#about">
                 <a className={`${styles.nav__itemLink} navItem2`}>About</a>
               </Link>
             </li>
             <li className={styles.nav__liItem}>
-              <Link href="/">
+              <Link href="#projects">
                 <a className={`${styles.nav__itemLink} navItem3`}>Projects</a>
               </Link>
             </li>

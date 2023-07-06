@@ -8,8 +8,16 @@ import { AiFillGithub } from 'react-icons/ai';
 import { SiLeetcode } from 'react-icons/si';
 
 const Home = () => {
-  const tl = useRef();
   useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.homeContainer',
+        start: 'top center',
+        end: '+=800 top ',
+        // markers: true,
+        invalidateOnRefresh: true,
+      },
+    });
     tl.current = gsap
       .timeline()
       .fromTo(
@@ -120,7 +128,7 @@ const Home = () => {
           x: '-20%',
           autoAlpha: 1,
 
-          duration: 0.8,
+          duration: 0.5,
         },
         '-=.5'
       )
@@ -142,7 +150,7 @@ const Home = () => {
           x: '-10%',
           autoAlpha: 1,
 
-          duration: 0.8,
+          duration: 0.5,
         },
         '-=.5'
       )
@@ -184,7 +192,7 @@ const Home = () => {
         {
           autoAlpha: 1,
 
-          duration: 1,
+          duration: 1.5,
         },
         '<'
       )
@@ -192,27 +200,17 @@ const Home = () => {
         '.socialMediaContainer',
         {
           autoAlpha: 0,
-          x: '-10%',
         },
         {
           autoAlpha: 1,
-          x: '50%',
-          duration: 0.5,
+          duration: 2,
         },
-        '>'
-      )
-      .to(
-        '.socialMediaContainer',
-        {
-          x: '0%',
-          duration: 0.5,
-        },
-        '>'
+        '-=.8'
       );
   }, []);
 
   return (
-    <div className={styles.s}>
+    <div className={`${styles.s} homeContainer`} id="home">
       <div className={`${styles.slider} slideDown`}>
         <div className={`${styles.slider__centerTxt} slideUp`}>
           <div className={`${styles.slider__firstLine} firstLine`}>

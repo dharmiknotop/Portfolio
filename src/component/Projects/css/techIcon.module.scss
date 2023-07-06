@@ -1,0 +1,27 @@
+.s {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 45px;
+    margin-top: 35px;
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: purple;
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-family: Fredoka;
+  }
+}

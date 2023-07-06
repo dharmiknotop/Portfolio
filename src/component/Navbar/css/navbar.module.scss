@@ -6,12 +6,16 @@
     justify-content: center;
     align-items: center;
 
-    padding-left: 60px;
+    padding-left: 00px;
+
+    @media (min-width: 576px) {
+      padding-left: 60px;
+    }
   }
 
   &__profile {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 100%;
     object-fit: contain;

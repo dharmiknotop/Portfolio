@@ -1,7 +1,7 @@
-import React from 'react'
-import { BsTelephone } from 'react-icons/bs'
-import { CgMail } from 'react-icons/cg'
-import styles from './css/contact.module.scss'
+import React from 'react';
+import { BsTelephone } from 'react-icons/bs';
+import { CgMail } from 'react-icons/cg';
+import styles from './css/contact.module.scss';
 const Contact = () => {
   return (
     <div className={styles.s}>
@@ -9,16 +9,16 @@ const Contact = () => {
       <div className={styles.s__container}>
         {' '}
         <div className={`${styles.s__item}`}>
-          <BsTelephone color="lightGreen " style={{ paddingRight: '1rem' }} />{' '}
+          <BsTelephone className={styles.s__icon} color="lightGreen " />{' '}
           8487923230
         </div>
         <div className={`${styles.s__item}`}>
-          <CgMail color="white " style={{ paddingRight: '1rem' }} />{' '}
+          <CgMail className={styles.s__icon} color="white " />{' '}
           dhardharmik7@gmail.com
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
