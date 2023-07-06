@@ -6,6 +6,7 @@ import { FiLinkedin } from 'react-icons/fi';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 import { SiLeetcode } from 'react-icons/si';
+import Link from 'next/link';
 
 const Home = () => {
   useEffect(() => {
@@ -230,7 +231,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className={`${styles.s__socialMediaContainer} socialMediaContainer`}>
         <div className={styles.s__socialIcon}>
           <FiLinkedin />
@@ -245,18 +245,22 @@ const Home = () => {
           <SiLeetcode />
         </div>
       </div>
-
       <div className={`${styles.s__titleContainer} title`}>
         <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{' '}
         <h1 className={styles.s__myName}>DHARMIK UPADHYAYA</h1>
       </div>
-
       <div className={`${styles.s__subTxt} subTxt`}>
         A Frontend focused Web Developer building the Frontend of Websites and
         Web Applications that leads to the success of the overall product
       </div>
-
-      <button className={`${styles.s__projectBtn} projectBtn`}>Projects</button>
+      <Link href="#projects">
+        <a>
+          {' '}
+          <button className={`${styles.s__projectBtn} projectBtn`}>
+            Projects
+          </button>
+        </a>
+      </Link>
     </div>
   );
 };
