@@ -4,24 +4,38 @@
     flex-direction: column;
     align-items: center;
 
-    margin-right: 45px;
-    margin-top: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
 
     transition: all 0.5s ease-in-out;
 
     &:hover {
       color: purple;
     }
+
+    @media (min-width: 576px) {
+      margin-left: 0px;
+      margin-right: 45px;
+      margin-top: 35px;
+    }
   }
 
   &__icon {
-    font-size: 22px;
+    font-size: 15px;
 
     margin-bottom: 15px;
+
+    @media (min-width: 576px) {
+      font-size: 22px;
+    }
   }
 
   &__title {
-    font-size: 12px;
+    font-size: 10px;
     font-family: Fredoka;
+
+    @media (min-width: 576px) {
+      font-size: 12px;
+    }
   }
 }

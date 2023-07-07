@@ -64,9 +64,9 @@ const RightProjects = ({
   }, []);
   return (
     <>
-      <div className={`${styles.s} ${styles.s__reverseGridForMobile} Project`}>
-        <div className="row">
-          <div className="col-6">
+      <div className={`${styles.s}  container Project`}>
+        <div className={`${styles.s__reverseGridForMobile} row`}>
+          <div className="col-lg-6 col-12">
             <div className={styles.s__secondSectionContainer}>
               <a href={projectLink} rel="noreferrer" target="_blank">
                 <div className={`${styles.s__imgContainer} overlay-left`}>
@@ -82,7 +82,7 @@ const RightProjects = ({
               </a>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6 col-12">
             <div className={`${styles.s__container} ProjectRAnimation`}>
               <h2 className={styles.s__projectTitle}>
                 <a
@@ -96,7 +96,7 @@ const RightProjects = ({
               </h2>
               <div className={styles.s__projectDescContainer}>
                 <h4 className={styles.s__projectDesc}>{projectInfo}</h4>
-                <div className="d-flex flex-wrap">
+                <div className={styles.s__iconContainer}>
                   <TechIcon
                     noLeftPadding={true}
                     TechIcon={projectIcon}

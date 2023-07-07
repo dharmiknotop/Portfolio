@@ -4,12 +4,21 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+
+  width: 100vw;
+  height: 100vh;
+
   background-color: #0a192f;
-  z-index: 100;
-  text-align: center;
+
   color: $cyanColor;
+  text-align: center;
+
+  z-index: 100;
+
+  @media (min-width: 576px) {
+    width: 100%;
+    height: 100%;
+  }
 
   &__centerTxt {
     position: absolute;
@@ -145,7 +154,7 @@
   }
 
   &__myName {
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 800;
     line-height: 40px;
 

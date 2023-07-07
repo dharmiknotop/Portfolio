@@ -13,18 +13,18 @@ const MyExprience = () => {
         <BsBriefcaseFill
           color="cyan"
           size={30}
-          style={{ marginRight: '1rem' }}
+          className={styles.s__heading__icon}
         />
         My Experience
       </h1>
-      <h1 className={`${styles.s__desc} aboutMeTitle`}>
+      <h1 className={`${styles.s__desc}`}>
         Here you will find more information about me, what I do, and my current
         skills mostly in terms of programming and technology
       </h1>
-      <div className={styles.expCompaniesContainerOuter}>
+      <div className={`container ${styles.expCompaniesContainerOuter}`}>
         <div className="row justify-content-center">
-          <div className="col-1"></div>
-          <div className="col-2 p-0">
+          <div className="col-0 col-lg-1"></div>
+          <div className="col-12 col-lg-2">
             <ul className={styles.expCompaniesContainer}>
               <li
                 className={`${
@@ -51,7 +51,7 @@ const MyExprience = () => {
             </ul>
           </div>
 
-          <div className="col-6 p-0">
+          <div className="col-12 col-lg-6">
             <div className={styles.expTxtContainer}>
               {experience === 'firstExp' && <FirstExperience />}
               {experience === 'secondExp' && <SecondExperience />}

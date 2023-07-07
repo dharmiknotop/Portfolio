@@ -22,10 +22,6 @@ const LeftSideProject = ({
 }) => {
   const [state, setState] = useState('true');
 
-  const ChangeTheState = () => {
-    setState('false');
-  };
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -72,9 +68,9 @@ const LeftSideProject = ({
   }, []);
 
   return (
-    <div className={`${styles.s} Project`}>
+    <div className={`${styles.s} container Project`}>
       <div className="row">
-        <div className="col-6">
+        <div className="col-lg-6 col-12">
           <div className={`${styles.s__container} ProjectAnimation`}>
             <h2 className={styles.s__projectTitle}>
               <a
@@ -89,7 +85,7 @@ const LeftSideProject = ({
 
             <div className={styles.s__projectDescContainer}>
               <h4 className={styles.s__projectDesc}>{projectInfo}</h4>
-              <div className="d-flex">
+              <div className={styles.s__iconContainer}>
                 <TechIcon
                   noLeftPadding={true}
                   TechIcon={projectIcon}
@@ -114,7 +110,7 @@ const LeftSideProject = ({
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-lg-6 col-12">
           <div className={styles.s__secondSectionContainer}>
             <a href={projectLink} rel="noreferrer" target="_blank">
               <div className={`${styles.s__imgContainer} overlay-right`}>

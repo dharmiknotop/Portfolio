@@ -16,7 +16,7 @@ import weChatImg from './Projects/img/weChatProject.JPG';
 
 const Projectscreen = () => {
   return (
-    <div className="container" id="projects">
+    <div id="projects">
       <h1 className={styles.s__heading}>
         <FaRegLightbulb
           color="cyan"
@@ -30,8 +30,6 @@ const Projectscreen = () => {
         Here you will find some of the personal and clients projects that I
         created with each project containing its own case study
       </h1>
-      <br />
-      <br />
       <LeftSideProject
         projectName="We-Chat App"
         projectInfo="Chatting website where you can talk to other registered users with excellent features. Tech stach used for this is: "

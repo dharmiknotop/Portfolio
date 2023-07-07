@@ -125,7 +125,7 @@ const About = () => {
   return (
     <div className={styles.s} id="about">
       <h1 className={`${styles.s__heading} aboutMeTitle`}>
-        <FaUserAlt color="cyan" size={30} style={{ marginRight: '1.5rem' }} />
+        <FaUserAlt color="cyan" size={30} className={styles.s__heading__icon} />
         About Me
       </h1>
 
@@ -134,12 +134,9 @@ const About = () => {
         skills mostly in terms of programming and technology
       </h1>
 
-      <div
-        className={styles.s}
-        style={{ fontSize: '1.4rem', fontWeight: '800' }}
-      >
+      <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className={`${styles.s__aboutMeContainer} aboutMeContainer `}>
               <h2 className={`${styles.s__knowMeSectionTitle} getToKnowMe`}>
                 Get to know me!
@@ -164,7 +161,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className={`${styles.s__skillsOuterContainer}`}>
               <h2 className={`${styles.s__skillsSectionTitle} mySkill`}>
                 My skills
