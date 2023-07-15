@@ -12,10 +12,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Taviraj:wght@600&display=swap"
-            rel="stylesheet"
-          />
-          <link
             href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap"
             rel="stylesheet"
           ></link>
@@ -28,14 +24,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap"
             rel="stylesheet"
           ></link>
-          {/* text for giving title */}
+
           <link
             href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-            rel="stylesheet"
-          />
-          {/* dharmik upadhyay txt font yuji */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap"
             rel="stylesheet"
           />
 

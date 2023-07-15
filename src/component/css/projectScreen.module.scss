@@ -1,5 +1,3 @@
-@import '/styles/variables.scss';
-
 .s {
   &__heading {
     position: relative;
@@ -9,7 +7,7 @@
     justify-content: center;
 
     font-size: 28px;
-    font-family: $secondaryFont;
+    font-family: 'Pacifico', cursive;
     text-align: center;
 
     padding-bottom: 30px;

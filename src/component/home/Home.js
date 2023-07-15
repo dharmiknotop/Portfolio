@@ -232,18 +232,26 @@ const Home = () => {
         </div>
       </div>
       <div className={`${styles.s__socialMediaContainer} socialMediaContainer`}>
-        <div className={styles.s__socialIcon}>
-          <FiLinkedin />
-        </div>
-        <div className={styles.s__socialIcon}>
-          <FaTwitter />
-        </div>
-        <div className={styles.s__socialIcon}>
-          <AiFillGithub />
-        </div>
-        <div className={styles.s__socialIcon}>
-          <SiLeetcode />
-        </div>
+        <Link href="https://www.linkedin.com/in/dharmik-upadhyay-453797222/">
+          <a className={styles.s__socialIcon}>
+            <FiLinkedin />
+          </a>
+        </Link>
+        <Link href="https://twitter.com/CodeDhardev">
+          <a className={styles.s__socialIcon}>
+            <FaTwitter />
+          </a>
+        </Link>
+        <Link href="https://github.com/dharmiknotop">
+          <a className={styles.s__socialIcon}>
+            <AiFillGithub />
+          </a>
+        </Link>
+        <Link href="https://leetcode.com/dharmikupadhyaydev/">
+          <a className={styles.s__socialIcon}>
+            <SiLeetcode />
+          </a>
+        </Link>
       </div>
       <div className={`${styles.s__titleContainer} title`}>
         <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{' '}

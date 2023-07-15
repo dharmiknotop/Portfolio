@@ -1,46 +1,9 @@
-html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  scroll-behavior: unset;
-}
-
-body {
   background-color: #0a192f;
-  color: white !important;
+  color: white;
+
   font-family: 'Hubballi', cursive;
-}
-
-.testMediaQueires {
-  /* sm -> 40px gap for two section */
-
-  @media (min-width: 576px) {
-  }
-
-  @media (max-width: 576px) {
-  }
-
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 992px) {
-  }
-
-  @media (max-width: 1200px) and (min-width: 768px) {
-  }
-
-  @media (min-width: 1200px) {
-  }
-
-  @media (min-width: 1440px) {
-  }
-
-  @media (min-width: 1680px) {
-  }
-
-  @media (min-width: 1920px) {
-  }
 }
