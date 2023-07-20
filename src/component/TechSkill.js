@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import styles from './css/techStack.module.scss';
+import styles from './css/techSkill.module.scss';
 
-const Techstack = ({ name, icon, link }) => {
+const TechSkill = ({ name, icon, link }) => {
   return (
     <Link href={link}>
       <a className={styles.s__container}>
@@ -13,4 +13,4 @@ const Techstack = ({ name, icon, link }) => {
   );
 };
 
-export default Techstack;
+export default TechSkill;

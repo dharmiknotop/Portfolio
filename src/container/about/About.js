@@ -1,8 +1,10 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
-import TechStack from '../../container/Techstack';
+import { useEffect } from 'react';
+import styles from './css/about.module.scss';
+
+import TechSkill from '../../component/TechSkill';
+
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap/dist/gsap';
-import styles from './css/about.module.scss';
 
 import { FaUserAlt } from 'react-icons/fa';
 import { AiFillHtml5 } from 'react-icons/ai';
@@ -122,6 +124,54 @@ const About = () => {
     return () => tl.scrollTrigger.kill();
   }, []);
 
+  const mySkills = [
+    {
+      link: 'https://www.w3schools.com/html/',
+      icon: <AiFillHtml5 />,
+      name: 'HTML',
+    },
+    {
+      link: 'https://www.w3schools.com/css/',
+      icon: <FaCss3Alt />,
+      name: 'CSS',
+    },
+    {
+      link: 'https://sass-lang.com/',
+      icon: <FaSass />,
+      name: 'SASS',
+    },
+    {
+      link: 'https://www.w3schools.com/js/',
+      icon: <IoLogoJavascript />,
+      name: 'JavaScript',
+    },
+    {
+      link: 'https://legacy.reactjs.org/docs/getting-started.html',
+      icon: <FaReact />,
+      name: 'React',
+    },
+    {
+      link: 'https://nextjs.org/',
+      icon: <SiNextdotjs />,
+      name: 'NextJs',
+    },
+    {
+      link: 'https://git-scm.com/',
+      icon: <AiFillGithub />,
+      name: 'Git',
+    },
+    {
+      link: 'https://expressjs.com/',
+      icon: <SiExpress />,
+      name: 'Express',
+    },
+    {
+      link: 'https://firebase.google.com/',
+      icon: <SiFirebase />,
+      name: 'Firebase',
+    },
+  ];
+
   return (
     <div className={styles.s} id="about">
       <h1 className={`${styles.s__heading} aboutMeTitle`}>
@@ -168,51 +218,16 @@ const About = () => {
               </h2>
 
               <div className={`${styles.s__skillsContainer} skillsContainer`}>
-                <TechStack
-                  link="https://www.w3schools.com/html/"
-                  icon={<AiFillHtml5 />}
-                  name="HTML"
-                />
-                <TechStack
-                  link="https://www.w3schools.com/css/"
-                  icon={<FaCss3Alt />}
-                  name="CSS"
-                />
-                <TechStack
-                  link="https://www.w3schools.com/js/"
-                  icon={<IoLogoJavascript />}
-                  name="JavaScript"
-                />
-                <TechStack
-                  link="https://legacy.reactjs.org/docs/getting-started.html"
-                  icon={<FaReact />}
-                  name="React"
-                />
-                <TechStack
-                  link="https://sass-lang.com/"
-                  icon={<FaSass />}
-                  name="SASS"
-                />
-                <TechStack
-                  link="https://git-scm.com/"
-                  icon={<AiFillGithub />}
-                  name="Git"
-                />
-                <TechStack
-                  link="https://expressjs.com/"
-                  icon={<SiExpress />}
-                  name="Express"
-                />
-                <TechStack
-                  link="https://nextjs.org/"
-                  icon={<SiNextdotjs />}
-                  name="NextJs"
-                />
-                <TechStack
-                  link="https://firebase.google.com/"
-                  icon={<SiFirebase />}
-                  name="Firebase"
-                />
+                {mySkills.map((item) => {
+                  return (
+                    <TechSkill
+                      link={item.link}
+                      icon={item.icon}
+                      name={item.name}
+                      key={item.name}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>{' '}

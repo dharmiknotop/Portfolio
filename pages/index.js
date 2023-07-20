@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import styles from '../styles/index.module.scss';
 
-import Navbar from '../src/component/Navbar/Navbar';
-import Home from '../src/component/home/Home';
-import About from '../src/component/aboutSection/About';
-import Experience from '../src/component/experienceSection/Experience';
-import Projectscreen from '../src/component/ProjectScreen';
-import Contact from '../src/component/contact/Contact';
+import Navbar from '../src/container/navbar/Navbar';
+import Home from '../src/container/home/Home';
+import About from '../src/container/about/About';
+import Experience from '../src/container/experience/Experience';
+import Projects from '../src/container/projects/Project';
+import Contact from '../src/container/contact/Contact';
 
 export default function Index() {
   return (
@@ -17,7 +17,7 @@ export default function Index() {
           <Home />
           <About />
           <Experience />
-          <Projectscreen />
+          <Projects />
           <Contact />
         </div>
       </div>
