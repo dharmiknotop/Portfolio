@@ -1,14 +1,15 @@
 import { Fragment, useState } from 'react';
-
 import styles from './css/experience.module.scss';
 
 import Fade from 'react-reveal/Fade';
 
 import { IoMdArrowDropright } from 'react-icons/io';
-import { BsBriefcaseFill } from 'react-icons/bs';
+
+import SectionHeading from '@component/sectionHeading/SectionHeading';
+import { experience } from '@data/sectionHeading';
 
 const Experience = () => {
-  const [experience, setExperience] = useState('secondExp');
+  const [experienceTab, setExperienceTab] = useState('secondExp');
 
   const FirstExperience = () => {
     return (
@@ -109,18 +110,7 @@ const Experience = () => {
 
   return (
     <div className={styles.s}>
-      <h1 className={styles.s__heading}>
-        <BsBriefcaseFill
-          color="cyan"
-          size={30}
-          className={styles.s__heading__icon}
-        />
-        My Experience
-      </h1>
-      <h1 className={`${styles.s__desc}`}>
-        Here you will find more information about me, what I do, and my current
-        skills mostly in terms of programming and technology
-      </h1>
+      <SectionHeading {...experience} />
       <div className={`container ${styles.expCompaniesContainerOuter}`}>
         <div className="row justify-content-center">
           <div className="col-0 col-lg-1"></div>
@@ -128,22 +118,22 @@ const Experience = () => {
             <ul className={styles.expCompaniesContainer}>
               <li
                 className={`${
-                  experience === 'secondExp' &&
+                  experienceTab === 'secondExp' &&
                   styles.expCompaniesContainer__activeTxt
                 } ${styles.expCompaniesContainer__txt}`}
                 onClick={() => {
-                  setExperience('secondExp');
+                  setExperienceTab('secondExp');
                 }}
               >
                 Edufu
               </li>
               <li
                 className={`${
-                  experience === 'firstExp' &&
+                  experienceTab === 'firstExp' &&
                   styles.expCompaniesContainer__activeTxt
                 } ${styles.expCompaniesContainer__txt}`}
                 onClick={() => {
-                  setExperience('firstExp');
+                  setExperienceTab('firstExp');
                 }}
               >
                 Edufu
@@ -153,8 +143,8 @@ const Experience = () => {
 
           <div className="col-12 col-lg-6">
             <div className={styles.expTxtContainer}>
-              {experience === 'firstExp' && <FirstExperience />}
-              {experience === 'secondExp' && <SecondExperience />}
+              {experienceTab === 'firstExp' && <FirstExperience />}
+              {experienceTab === 'secondExp' && <SecondExperience />}
             </div>
           </div>
         </div>

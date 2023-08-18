@@ -1,21 +1,14 @@
 import { useEffect } from 'react';
 import styles from './css/about.module.scss';
 
-import TechSkill from '../../component/TechSkill';
-
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap/dist/gsap';
 
-import { FaUserAlt } from 'react-icons/fa';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { FaCss3Alt } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
-import { FaReact } from 'react-icons/fa';
-import { FaSass } from 'react-icons/fa';
-import { AiFillGithub } from 'react-icons/ai';
-import { SiExpress } from 'react-icons/si';
-import { SiNextdotjs } from 'react-icons/si';
-import { SiFirebase } from 'react-icons/si';
+import TechSkill from '@component/techSkill/TechSkill';
+import { mySkills } from '@data/mySkills';
+
+import SectionHeading from '@component/sectionHeading/SectionHeading';
+import { about } from '@data/sectionHeading';
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +23,7 @@ const About = () => {
       },
     });
     tl.fromTo(
-      '.aboutMeTitle',
+      '#aboutMeTitle',
       {
         transform: 'scale(0, 0)',
       },
@@ -39,12 +32,12 @@ const About = () => {
         duration: 0.5,
       }
     )
-      .to('.aboutMeTitle', {
+      .to('#aboutMeTitle', {
         transform: 'scale(1, 1)',
         duration: 0.5,
       })
       .fromTo(
-        '.aboutMeDesc',
+        '#aboutMeDesc',
         {
           autoAlpha: 0,
         },
@@ -124,65 +117,9 @@ const About = () => {
     return () => tl.scrollTrigger.kill();
   }, []);
 
-  const mySkills = [
-    {
-      link: 'https://www.w3schools.com/html/',
-      icon: <AiFillHtml5 />,
-      name: 'HTML',
-    },
-    {
-      link: 'https://www.w3schools.com/css/',
-      icon: <FaCss3Alt />,
-      name: 'CSS',
-    },
-    {
-      link: 'https://sass-lang.com/',
-      icon: <FaSass />,
-      name: 'SASS',
-    },
-    {
-      link: 'https://www.w3schools.com/js/',
-      icon: <IoLogoJavascript />,
-      name: 'JavaScript',
-    },
-    {
-      link: 'https://legacy.reactjs.org/docs/getting-started.html',
-      icon: <FaReact />,
-      name: 'React',
-    },
-    {
-      link: 'https://nextjs.org/',
-      icon: <SiNextdotjs />,
-      name: 'NextJs',
-    },
-    {
-      link: 'https://git-scm.com/',
-      icon: <AiFillGithub />,
-      name: 'Git',
-    },
-    {
-      link: 'https://expressjs.com/',
-      icon: <SiExpress />,
-      name: 'Express',
-    },
-    {
-      link: 'https://firebase.google.com/',
-      icon: <SiFirebase />,
-      name: 'Firebase',
-    },
-  ];
-
   return (
     <div className={styles.s} id="about">
-      <h1 className={`${styles.s__heading} aboutMeTitle`}>
-        <FaUserAlt color="cyan" size={30} className={styles.s__heading__icon} />
-        About Me
-      </h1>
-
-      <h1 className={`${styles.s__desc} aboutMeDesc`}>
-        Here you will find more information about me, what I do, and my current
-        skills mostly in terms of programming and technology
-      </h1>
+      <SectionHeading {...about} />
 
       <div className="container">
         <div className="row">

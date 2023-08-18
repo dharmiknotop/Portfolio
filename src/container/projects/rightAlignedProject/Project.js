@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import styles from '../css/alignedProject.module.scss';
 
 import Image from 'next/image';
-import TechIcon from '../../../component/Techicon';
+import TechIcon from '../../../component/techIcon/TechIcon';
 
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

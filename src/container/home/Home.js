@@ -2,11 +2,9 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap/dist/gsap';
 import styles from './css/home.module.scss';
 
-import { FiLinkedin } from 'react-icons/fi';
-import { FaTwitter } from 'react-icons/fa';
-import { AiFillGithub } from 'react-icons/ai';
-import { SiLeetcode } from 'react-icons/si';
 import Link from 'next/link';
+
+import SideBar from '@component/sideBar/SideBar';
 
 const Home = () => {
   useEffect(() => {
@@ -220,9 +218,8 @@ const Home = () => {
           <div className={`${styles.slider__secondLine} secondLine`}>
             &lt;
             <span className={`${styles.slider__title} secondLine`}>
-              {' '}
-              Dharmik{' '}
-            </span>{' '}
+              Dharmik
+            </span>
             /&gt;
           </div>
           <div className={`${styles.slider__thirdLine} thirdLine`}>
@@ -231,28 +228,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.s__socialMediaContainer} socialMediaContainer`}>
-        <Link href="https://www.linkedin.com/in/dharmik-upadhyay-453797222/">
-          <a className={styles.s__socialIcon}>
-            <FiLinkedin />
-          </a>
-        </Link>
-        <Link href="https://twitter.com/CodeDhardev">
-          <a className={styles.s__socialIcon}>
-            <FaTwitter />
-          </a>
-        </Link>
-        <Link href="https://github.com/dharmiknotop">
-          <a className={styles.s__socialIcon}>
-            <AiFillGithub />
-          </a>
-        </Link>
-        <Link href="https://leetcode.com/dharmikupadhyaydev/">
-          <a className={styles.s__socialIcon}>
-            <SiLeetcode />
-          </a>
-        </Link>
-      </div>
+
+      <SideBar />
+
       <div className={`${styles.s__titleContainer} title`}>
         <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{' '}
         <h1 className={styles.s__myName}>DHARMIK UPADHYAYA</h1>

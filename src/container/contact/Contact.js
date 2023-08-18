@@ -1,13 +1,13 @@
-import React from 'react';
+import styles from './css/contact.module.scss';
+
 import { BsTelephone } from 'react-icons/bs';
 import { CgMail } from 'react-icons/cg';
-import styles from './css/contact.module.scss';
+
 const Contact = () => {
   return (
     <div className={styles.s}>
       <h1 className={styles.s__title}>Contact me on : </h1>{' '}
       <div className={styles.s__container}>
-        {' '}
         <div className={`${styles.s__item}`}>
           <BsTelephone className={styles.s__icon} color="lightGreen " />{' '}
           8487923230

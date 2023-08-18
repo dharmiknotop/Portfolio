@@ -1,6 +1,6 @@
 import styles from './css/techIcon.module.scss';
 
-const Techicon = ({ TechIcon, TechName, noLeftPadding }) => {
+const TechIcon = ({ TechIcon, TechName, noLeftPadding }) => {
   return (
     <>
       <div className={`${styles.s__container} ${noLeftPadding && 'ps-0'}`}>
@@ -13,4 +13,4 @@ const Techicon = ({ TechIcon, TechName, noLeftPadding }) => {
   );
 };
 
-export default Techicon;
+export default TechIcon;
