@@ -18,8 +18,8 @@ const About = () => {
       scrollTrigger: {
         trigger: '.homeContainer',
         start: 'bottom center',
-        end: '+=800 ',
         invalidateOnRefresh: true,
+        // markers: true,
       },
     });
     tl.fromTo(

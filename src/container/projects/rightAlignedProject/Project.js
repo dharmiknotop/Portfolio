@@ -7,26 +7,15 @@ import TechIcon from '../../../component/techIcon/TechIcon';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-const RightProjects = ({
-  name,
-  info,
-  image,
-  link,
-  icon,
-  icon1,
-  icon2,
-  icon3,
-  iconName,
-  iconName1,
-  iconName2,
-  iconName3,
-}) => {
+const RightProjects = (props) => {
+  const { name, info, image, link, techIcon } = props;
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
       '.ProjectRAnimation',
       {
-        x: 50,
+        x: 10,
         autoAlpha: 0,
         duration: 1,
       },
@@ -98,26 +87,16 @@ const RightProjects = ({
             <div className={styles.s__projectDescContainer}>
               <h4 className={styles.s__projectDesc}>{info}</h4>
               <div className={styles.s__iconContainer}>
-                <TechIcon
-                  noLeftPadding={true}
-                  TechIcon={icon}
-                  TechName={iconName}
-                />
-                <TechIcon
-                  noLeftPadding={false}
-                  TechIcon={icon1}
-                  TechName={iconName1}
-                />
-                <TechIcon
-                  noLeftPadding={false}
-                  TechIcon={icon2}
-                  TechName={iconName2}
-                />
-                <TechIcon
-                  noLeftPadding={false}
-                  TechIcon={icon3}
-                  TechName={iconName3}
-                />
+                {techIcon &&
+                  techIcon.map((item) => {
+                    return (
+                      <TechIcon
+                        key={item.name}
+                        TechIcon={item.icon}
+                        TechName={item.name}
+                      />
+                    );
+                  })}
               </div>
             </div>
           </div>
