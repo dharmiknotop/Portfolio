@@ -1,11 +1,11 @@
-import { useEffect, useRef } from 'react';
-import styles from '../css/alignedProject.module.scss';
+import { useEffect, useRef } from "react";
+import styles from "./css/alignedProject.module.scss";
 
-import Image from 'next/image';
-import TechIcon from '../../../component/techIcon/TechIcon';
+import Image from "next/image";
+import TechIcon from "../techIcon/TechIcon";
 
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const RightProjects = (props) => {
   const { name, info, image, link, techIcon } = props;
@@ -13,7 +13,7 @@ const RightProjects = (props) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
-      '.ProjectRAnimation',
+      ".ProjectRAnimation",
       {
         x: 10,
         autoAlpha: 0,
@@ -24,16 +24,16 @@ const RightProjects = (props) => {
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           //   markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
       }
     );
     gsap.fromTo(
-      '.overlay-left',
+      ".overlay-left",
       {
         x: -50,
         autoAlpha: 0,
@@ -44,11 +44,11 @@ const RightProjects = (props) => {
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           // markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
       }
     );

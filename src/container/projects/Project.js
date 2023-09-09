@@ -1,10 +1,14 @@
-import LeftAligned from './leftAlignedProject/Project';
-import RightAligned from './rightAlignedProject/Project';
+import LeftAligned from "@component/leftAlignedProject/Project";
+import RightAligned from "@component/rightAlignedProject/Project";
 
-import SectionHeading from '@component/sectionHeading/SectionHeading';
+import SectionHeading from "@component/sectionHeading/SectionHeading";
 
-import { project } from '@data/sectionHeading';
-import { eCommerceProject, weChatProject } from '@data/project';
+import { project } from "@data/sectionHeading";
+import {
+  eCommerceProject,
+  lyristProjectsda,
+  weChatProject,
+} from "@data/project";
 
 const Projectscreen = () => {
   return (
@@ -13,6 +17,7 @@ const Projectscreen = () => {
 
       <LeftAligned {...weChatProject} />
       <RightAligned {...eCommerceProject} />
+      <LeftAligned {...lyristProjectsda} />
     </div>
   );
 };

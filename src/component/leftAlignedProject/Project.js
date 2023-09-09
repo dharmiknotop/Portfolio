@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import styles from '../css/alignedProject.module.scss';
+import { useEffect } from "react";
+import styles from "../rightAlignedProject/css/alignedProject.module.scss";
 
-import Image from 'next/image';
-import TechIcon from '../../../component/techIcon/TechIcon';
+import Image from "next/image";
+import TechIcon from "../techIcon/TechIcon";
 
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
 
 const LeftSideProject = (props) => {
   const { name, info, image, link, techIcon } = props;
@@ -14,7 +14,7 @@ const LeftSideProject = (props) => {
 
   useEffect(() => {
     gsap.fromTo(
-      '.ProjectAnimation',
+      ".ProjectAnimation",
       {
         y: -50,
         autoAlpha: 0,
@@ -25,16 +25,16 @@ const LeftSideProject = (props) => {
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           //   markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
       }
     );
     gsap.fromTo(
-      '.overlay-right',
+      ".overlay-right",
       {
         x: -50,
         autoAlpha: 0,
@@ -45,11 +45,11 @@ const LeftSideProject = (props) => {
         autoAlpha: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '.Project',
+          trigger: ".Project",
           // markers: true,
-          start: 'top center',
-          triggerActions: 'play none none reverse',
-          end: 'bottom bottom ',
+          start: "top center",
+          triggerActions: "play none none reverse",
+          end: "bottom bottom ",
         },
       }
     );
@@ -58,6 +58,7 @@ const LeftSideProject = (props) => {
   return (
     <div className={`${styles.s} container Project`}>
       <div className="row">
+        <div className="col-lg-1 p-0"></div>
         <div className="col-lg-6 col-12">
           <div className={`${styles.s__container} ProjectAnimation`}>
             <h2 className={styles.s__projectTitle}>
@@ -88,7 +89,7 @@ const LeftSideProject = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-12">
+        <div className="col-lg-5 col-12">
           <div className={styles.s__secondSectionContainer}>
             <a href={link} rel="noreferrer" target="_blank">
               <div className={`${styles.s__imgContainer} overlay-right`}>

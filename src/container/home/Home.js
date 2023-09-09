@@ -1,18 +1,18 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap/dist/gsap';
-import styles from './css/home.module.scss';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import styles from "./css/home.module.scss";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-import SideBar from '@component/sideBar/SideBar';
+import SideBar from "layout/sideBar/SideBar";
 
 const Home = () => {
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.homeContainer',
-        start: 'top center',
-        end: '+=800 top ',
+        trigger: ".homeContainer",
+        start: "top center",
+        end: "+=800 top ",
         // markers: true,
         invalidateOnRefresh: true,
       },
@@ -20,68 +20,68 @@ const Home = () => {
     tl.current = gsap
       .timeline()
       .fromTo(
-        '.firstLine',
+        ".firstLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
         }
       )
       .fromTo(
-        '.secondLine',
+        ".secondLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
         },
-        '-=0.6'
+        "-=0.6"
       )
       .fromTo(
-        '.thirdLine',
+        ".thirdLine",
         {
           autoAlpha: 0,
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
         {
           autoAlpha: 1,
-          y: '0%',
+          y: "0%",
           duration: 1,
         },
-        '-=0.7'
+        "-=0.7"
       )
       .fromTo(
-        '.slideDown',
+        ".slideDown",
         {
-          y: '0%',
+          y: "0%",
         },
         {
-          ease: 'SlowMo.ease.config(0.7, 0.7, false)',
-          y: '-100%',
+          ease: "SlowMo.ease.config(0.7, 0.7, false)",
+          y: "-100%",
           duration: 1,
         },
-        '+=.5'
+        "+=.5"
       )
       .to(
-        '.slideUp',
+        ".slideUp",
         {
-          y: '-100%',
+          y: "-100%",
           duration: 1,
         },
-        '-=0.8'
+        "-=0.8"
       )
       .fromTo(
-        '.title',
+        ".title",
         {
           autoAlpha: 0,
         },
@@ -90,10 +90,10 @@ const Home = () => {
 
           duration: 1,
         },
-        '-=0.5'
+        "-=0.5"
       )
       .fromTo(
-        '.subTxt',
+        ".subTxt",
         {
           autoAlpha: 0,
         },
@@ -102,11 +102,11 @@ const Home = () => {
 
           duration: 1,
         },
-        '-=.6'
+        "-=.6"
       )
 
       .fromTo(
-        '.projectBtn',
+        ".projectBtn",
         {
           autoAlpha: 0,
         },
@@ -115,76 +115,76 @@ const Home = () => {
 
           duration: 1,
         },
-        '-=.5'
+        "-=.5"
       )
       .fromTo(
-        '.navItem1',
+        ".navItem1",
         {
           autoAlpha: 0,
-          x: '100%',
+          x: "100%",
         },
         {
-          x: '-20%',
+          x: "-20%",
           autoAlpha: 1,
 
           duration: 0.5,
         },
-        '-=.5'
+        "-=.5"
       )
       .to(
-        '.navItem1',
+        ".navItem1",
         {
-          x: '0%',
+          x: "0%",
           duration: 0.2,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.navItem2',
+        ".navItem2",
         {
           autoAlpha: 0,
-          x: '100%',
+          x: "100%",
         },
         {
-          x: '-10%',
+          x: "-10%",
           autoAlpha: 1,
 
           duration: 0.5,
         },
-        '-=.5'
+        "-=.5"
       )
       .to(
-        '.navItem2',
+        ".navItem2",
         {
-          x: '0%',
+          x: "0%",
           duration: 0.2,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.navItem3',
+        ".navItem3",
         {
           autoAlpha: 0,
-          x: '100%',
+          x: "100%",
         },
         {
-          x: '-10%',
+          x: "-10%",
           autoAlpha: 1,
 
           duration: 0.8,
         },
-        '-=.5'
+        "-=.5"
       )
       .to(
-        '.navItem3',
+        ".navItem3",
         {
-          x: '0%',
+          x: "0%",
           duration: 0.2,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.logo',
+        ".logo",
         {
           autoAlpha: 0,
         },
@@ -193,10 +193,10 @@ const Home = () => {
 
           duration: 1.5,
         },
-        '<'
+        "<"
       )
       .fromTo(
-        '.socialMediaContainer',
+        ".socialMediaContainer",
         {
           autoAlpha: 0,
         },
@@ -204,7 +204,7 @@ const Home = () => {
           autoAlpha: 1,
           duration: 2,
         },
-        '-=.8'
+        "-=.8"
       );
   }, []);
 
@@ -223,7 +223,7 @@ const Home = () => {
             /&gt;
           </div>
           <div className={`${styles.slider__thirdLine} thirdLine`}>
-            {' '}
+            {" "}
             Portfolio website.
           </div>
         </div>
@@ -232,7 +232,7 @@ const Home = () => {
       <SideBar />
 
       <div className={`${styles.s__titleContainer} title`}>
-        <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{' '}
+        <span className={styles.s__titleTxt}>HEY, I&apos;M</span>{" "}
         <h1 className={styles.s__myName}>DHARMIK UPADHYAYA</h1>
       </div>
       <div className={`${styles.s__subTxt} subTxt`}>
@@ -241,7 +241,7 @@ const Home = () => {
       </div>
       <Link href="#projects">
         <a>
-          {' '}
+          {" "}
           <button className={`${styles.s__projectBtn} projectBtn`}>
             Projects
           </button>

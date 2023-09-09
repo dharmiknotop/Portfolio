@@ -1,6 +1,10 @@
 .s {
   margin-bottom: 5rem;
 
+  @media (min-width: 576px) {
+    margin-bottom: 8rem;
+  }
+
   &__reverseGridForMobile {
     @media (max-width: 576px) {
       flex-direction: column-reverse !important;
@@ -34,7 +38,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
 
       bottom: -2px;
@@ -145,7 +149,7 @@
   }
 
   &__borderedOverlay::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 7%;
     left: 7%;

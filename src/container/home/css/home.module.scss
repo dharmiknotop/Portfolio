@@ -25,7 +25,7 @@
     transform: translate(-50%, -50%);
 
     font-size: clamp(1.5rem, 6vw, 3rem);
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     margin: 0;
   }
 
@@ -41,7 +41,7 @@
 
   &__secondLine {
     opacity: 0;
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     color: #8892b0;
   }
 
@@ -59,7 +59,9 @@
   align-items: center;
 
   @media (min-width: 576px) {
-    margin: 0;
+    margin: 0 auto;
+    width: 1000px;
+    max-width: 90%;
   }
 
   &__titleContainer {
@@ -71,7 +73,7 @@
     margin: 20px;
 
     @media (min-width: 576px) {
-      margin: 0 0 30px;
+      margin: 0 0 45px;
     }
 
     @media (min-width: 768px) {

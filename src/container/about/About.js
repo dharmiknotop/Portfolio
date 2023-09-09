@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
-import styles from './css/about.module.scss';
+import { useEffect } from "react";
+import styles from "./css/about.module.scss";
 
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
 
-import TechSkill from '@component/techSkill/TechSkill';
-import { mySkills } from '@data/mySkills';
+import TechSkill from "@component/techSkill/TechSkill";
+import { mySkills } from "@data/mySkills";
 
-import SectionHeading from '@component/sectionHeading/SectionHeading';
-import { about } from '@data/sectionHeading';
+import SectionHeading from "@component/sectionHeading/SectionHeading";
+import { about } from "@data/sectionHeading";
 
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,28 +16,28 @@ const About = () => {
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.homeContainer',
-        start: 'bottom center',
+        trigger: ".homeContainer",
+        start: "bottom center",
         invalidateOnRefresh: true,
         // markers: true,
       },
     });
     tl.fromTo(
-      '#aboutMeTitle',
+      "#aboutMeTitle",
       {
-        transform: 'scale(0, 0)',
+        transform: "scale(0, 0)",
       },
       {
-        transform: 'scale(1.3, 1.3)',
+        transform: "scale(1.3, 1.3)",
         duration: 0.5,
       }
     )
-      .to('#aboutMeTitle', {
-        transform: 'scale(1, 1)',
+      .to("#aboutMeTitle", {
+        transform: "scale(1, 1)",
         duration: 0.5,
       })
       .fromTo(
-        '#aboutMeDesc',
+        "#aboutMeDesc",
         {
           autoAlpha: 0,
         },
@@ -45,10 +45,10 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.getToKnowMe',
+        ".getToKnowMe",
         {
           autoAlpha: 0,
         },
@@ -56,11 +56,11 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '>'
+        ">"
       )
 
       .fromTo(
-        '.aboutMeContent',
+        ".aboutMeContent",
         {
           autoAlpha: 0,
         },
@@ -68,10 +68,10 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.aboutMeContent1',
+        ".aboutMeContent1",
         {
           autoAlpha: 0,
         },
@@ -79,10 +79,10 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '-=0.8'
+        "-=0.8"
       )
       .fromTo(
-        '.aboutMeContent2',
+        ".aboutMeContent2",
         {
           autoAlpha: 0,
         },
@@ -90,10 +90,10 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '-=0.8'
+        "-=0.8"
       )
       .fromTo(
-        '.mySkill',
+        ".mySkill",
         {
           autoAlpha: 0,
         },
@@ -101,10 +101,10 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '>'
+        ">"
       )
       .fromTo(
-        '.skillsContainer',
+        ".skillsContainer",
         {
           autoAlpha: 0,
         },
@@ -112,7 +112,7 @@ const About = () => {
           autoAlpha: 1,
           duration: 1,
         },
-        '>'
+        ">"
       );
     return () => tl.scrollTrigger.kill();
   }, []);
@@ -123,19 +123,20 @@ const About = () => {
 
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-6">
+          <div className="col-lg-1 p-0"></div>
+          <div className="col-12 col-lg-5">
             <div className={`${styles.s__aboutMeContainer} aboutMeContainer `}>
               <h2 className={`${styles.s__knowMeSectionTitle} getToKnowMe`}>
                 Get to know me!
               </h2>
               <p className="aboutMeContent">
-                I am a <span>Frontend Web Developer </span> at{' '}
+                I am a <span>Frontend Web Developer </span> at{" "}
                 <span>Edufu</span>. building the Front-end of the Website and
                 Web Applications that leads to the success of the overall
                 product.
               </p>
               <p className="aboutMeContent1">
-                I am currently Doing diploma in{' '}
+                I am currently Doing diploma in{" "}
                 <span>Gandhinagar Government Polytechnic </span>
                 college. I live in Mehsana, Gujrat and currently 18 year old.
               </p>
@@ -167,7 +168,7 @@ const About = () => {
                 })}
               </div>
             </div>
-          </div>{' '}
+          </div>{" "}
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
-import { Fragment } from 'react';
-import styles from '../styles/index.module.scss';
+import { Fragment } from "react";
+import styles from "../styles/index.module.scss";
 
-import Navbar from '../src/container/navbar/Navbar';
-import Home from '../src/container/home/Home';
-import About from '../src/container/about/About';
-import Experience from '../src/container/experience/Experience';
-import Projects from '../src/container/projects/Project';
-import Contact from '../src/container/contact/Contact';
+import Navbar from "layout/navbar/Navbar";
+import Home from "@container/home/Home";
+import About from "@container/about/About";
+import Experience from "@container/experience/Experience";
+import Projects from "@container/projects/Project";
+import Contact from "@container/contact/Contact";
 
 export default function Index() {
   return (
