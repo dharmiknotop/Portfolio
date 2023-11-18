@@ -1,6 +1,6 @@
 import weChatImg from "./img/weChatProject.JPG";
 import e_commerceImg from "./img/ecommerceProject.JPG";
-import LyricsProject from "./img/lyristProject.JPG";
+import LyricsProject from "./img/lyristProject.jpg";
 
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
