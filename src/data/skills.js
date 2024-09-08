@@ -4,7 +4,7 @@ import { FaSass, FaCss3Alt, FaReact } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { SiExpress, SiNextdotjs, SiFirebase, SiGraphql } from "react-icons/si";
 
-export const mySkills = [
+export const skills = [
   {
     link: "https://www.w3schools.com/html/",
     icon: <AiFillHtml5 />,

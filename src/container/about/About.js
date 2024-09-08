@@ -5,9 +5,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
 
 import TechSkill from "@component/techSkill/TechSkill";
-import { mySkills } from "@data/mySkills";
-
 import SectionHeading from "@component/sectionHeading/SectionHeading";
+
+import { skills } from "@data/skills";
 import { about } from "@data/sectionHeading";
 
 const About = () => {
@@ -156,7 +156,7 @@ const About = () => {
               </h2>
 
               <div className={`${styles.s__skillsContainer} skillsContainer`}>
-                {mySkills.map((item) => {
+                {skills.map((item) => {
                   return (
                     <TechSkill
                       link={item.link}
