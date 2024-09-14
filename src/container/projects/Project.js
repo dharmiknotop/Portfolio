@@ -1,23 +1,17 @@
-import LeftAligned from "@component/leftAlignedProject/Project";
-import RightAligned from "@component/rightAlignedProject/Project";
-
 import SectionHeading from "@component/sectionHeading/SectionHeading";
+import Project from "@component/projects/Project";
 
 import { project } from "@data/sectionHeading";
-import {
-  eCommerceProject,
-  lyristProjectsda,
-  weChatProject,
-} from "@data/project";
+import { projectData } from "@data/project";
 
 const Projectscreen = () => {
   return (
     <div id="projects">
       <SectionHeading {...project} />
 
-      <LeftAligned {...weChatProject} />
-      <RightAligned {...eCommerceProject} />
-      <LeftAligned {...lyristProjectsda} />
+      {projectData.map((item, idx) => {
+        return <Project key={idx} {...item} />;
+      })}
     </div>
   );
 };

@@ -14,7 +14,7 @@ const ExpDetails = ({ item }) => {
         {item.points.map((message, idx) => {
           return (
             <div
-              key={idx}
+              key={`exp${idx}`}
               className={styles.expContainer__bulletPointContainer}
             >
               <div className={styles.expContainer__bulletPointSvgContainer}>

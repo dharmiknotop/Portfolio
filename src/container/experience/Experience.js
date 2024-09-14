@@ -16,7 +16,7 @@ const Experience = () => {
       <div className={`container ${styles.expCompaniesContainerOuter}`}>
         <div className="row justify-content-center">
           <div className="col-0 col-lg-1"></div>
-          <div className="col-12 col-lg-2">
+          <div className="col-12 col-lg-3">
             <ul className={styles.expCompaniesContainer}>
               <li
                 className={`${

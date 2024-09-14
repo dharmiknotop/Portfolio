@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import styles from "../rightAlignedProject/css/alignedProject.module.scss";
+import styles from "./css/project.module.scss";
 
 import Image from "next/image";
 import TechIcon from "../techIcon/TechIcon";
@@ -7,7 +7,7 @@ import TechIcon from "../techIcon/TechIcon";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
 
-const LeftSideProject = (props) => {
+const Project = (props) => {
   const { name, info, image, link, techIcon } = props;
 
   gsap.registerPlugin(ScrollTrigger);
@@ -54,12 +54,12 @@ const LeftSideProject = (props) => {
       }
     );
   }, []);
-
   return (
-    <div className={`${styles.s} container Project`}>
-      <div className="row">
-        <div className="col-lg-1 p-0"></div>
-        <div className="col-lg-6 col-12">
+    <div
+      className={`${styles.s} container Project ${styles.s__projectAlignment}`}
+    >
+      <div className={styles.s__row}>
+        <div className={`col-lg-6 col-12 ${styles.s__item}`}>
           <div className={`${styles.s__container} ProjectAnimation`}>
             <h2 className={styles.s__projectTitle}>
               <a
@@ -89,7 +89,7 @@ const LeftSideProject = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-5 col-12">
+        <div className={`col-lg-6 col-12 ${styles.s__item}`}>
           <div className={styles.s__secondSectionContainer}>
             <a href={link} rel="noreferrer" target="_blank">
               <div className={`${styles.s__imgContainer} overlay-right`}>
@@ -110,4 +110,4 @@ const LeftSideProject = (props) => {
   );
 };
 
-export default LeftSideProject;
+export default Project;

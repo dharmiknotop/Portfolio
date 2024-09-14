@@ -2,65 +2,6 @@
   margin-bottom: 128px;
 }
 
-.expContainer {
-  max-width: 100%;
-
-  &__companyName {
-    font-family: "Pacifico", cursive;
-    font-size: 25px;
-    letter-spacing: 5px;
-    margin-bottom: 8px;
-    margin-top: 0;
-
-    @media (min-width: 576px) {
-      font-size: 32px;
-    }
-  }
-
-  &__timePeriod {
-    font-family: Fredoka;
-    color: #8892b0;
-    font-size: 14px;
-
-    margin-top: 0;
-    margin-bottom: 30px;
-
-    @media (min-width: 576px) {
-      font-size: 16px;
-    }
-  }
-
-  &__bulletPointContainer {
-    display: flex;
-
-    margin-bottom: 25px;
-  }
-
-  &__bulletPoint {
-    font-family: Fredoka;
-    line-height: 25px;
-    font-size: 15px;
-    color: #8892b0;
-
-    margin-left: 10px;
-    margin-top: 2px;
-
-    letter-spacing: 1px;
-
-    span {
-      color: #31ffce;
-    }
-  }
-
-  &__bulletPointSvgContainer {
-    width: 20px;
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}
-
 .expCompaniesContainerOuter {
   margin: 30px auto 80px;
 }
@@ -114,13 +55,12 @@
     display: block;
     padding-bottom: 0;
     overflow-y: hidden;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
 .expTxtContainer {
   padding-left: 20px;
-
-  @media (min-width: 576px) {
-    padding-left: 54px;
-  }
 }

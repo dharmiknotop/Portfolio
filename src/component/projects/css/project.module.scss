@@ -13,11 +13,11 @@
 
   &__container {
     visibility: hidden;
-    margin-bottom: 50px;
 
     @media (min-width: 576px) {
-      margin-left: 8px;
-      margin-bottom: 0;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: 0;
     }
   }
 
@@ -157,5 +157,32 @@
     height: 100%;
     border: 2px solid cyan;
     z-index: -1;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 950px) {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+  }
+
+  &__projectAlignment:nth-child(odd) &__item:nth-child(1) {
+    order: 1;
+  }
+
+  &__projectAlignment:nth-child(odd) &__item:nth-child(2) {
+    order: 2;
+  }
+
+  /* For even containers */
+  &__projectAlignment:nth-child(even) &__item:nth-child(1) {
+    order: 2;
+  }
+
+  &__projectAlignment:nth-child(even) &__item:nth-child(2) {
+    order: 1;
   }
 }
